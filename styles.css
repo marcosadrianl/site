@@ -1,0 +1,36 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.link {
+    text-align: right;
+}
+
+.section {
+    line-height: 0; /* Esto es para que los titulos no tengan un espacio entre lineas */
+}
+
+.imgcent {
+    vertical-align: bottom;
+}
+
+.center {
+    text-align: center;
+}
+
+.img-icon { /* Esto es para que las imagenes de los iconos tengan el mismo tamaño */
+    width: 25px;
+    height: 25px;
+    margin-right: 0px;
+    vertical-align: middle;
+}
+
+.special-font { /* Esto es para que el texto sea más grande y en negrita */
+    font-size: 25px;
+    font-weight: bold;
+}
