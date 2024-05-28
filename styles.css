@@ -34,3 +34,12 @@ a {
     font-size: 25px;
     font-weight: bold;
 }
+
+/* Cuando el dispositivo de salida sea una impresora */
+@media print {
+
+  /* Utilizar una regla parecida a ésta: */
+  .ocultar-al-imprimir {
+    display: none;
+  }
+}
