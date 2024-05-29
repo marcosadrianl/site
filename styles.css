@@ -101,5 +101,10 @@ ul, ol {
 .highlight {
     background-color: rgb(134, 134, 60);
     transition: background-color 0.5s ease;
+}
 
+.img-perfil {
+    height: 125px; 
+    display: block; 
+    border-radius: 50%;
 }
