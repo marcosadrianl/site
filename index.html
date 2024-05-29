@@ -7,11 +7,6 @@
     <title>Marcos Lucas Online CV</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="favicon.ico" />
-    <style>
-        .highlight {
-            background-color: yellow; /* O el estilo que prefieras */
-        }
-    </style>
 </head>
 
 <body>
@@ -67,7 +62,7 @@
         <div class="ocultar-al-imprimir">
             <h2 class="section">Sumario</h2>
             <hr>
-            <p>Este CV también se puede imprimir desde <span onclick="window.print()" style="cursor: pointer;">aquí</span></p>
+            <p>Este CV también se puede imprimir desde <span onclick="window.print()" style="cursor: pointer; text-decoration: underline;">aquí</span></p>
         </div>
         <br>
 
@@ -83,10 +78,10 @@
         <p>Dictado de clases de apoyo escolar y universitario en las áreas de matemáticas y física. (2016 - 2023)</p>
         <h3>Asesor Inmobiliario en Century21 Argentina</h3>
         <p>Como asesor llevé adelante procesos de compra-venta de inmuebles, capacitándome en los cursos de Century21 Argentina. (2018 - 2020)</p>
-
         <br>
 
         <!--PROYECTOS-->
+        <div class="ocultar-al-imprimir"> 
         <h2 class="section">Proyectos</h2>
         <hr>
         <h3>Laboratorio físico: Cálculo del mu estático y dinámico de un sistema<span class="ocultar-al-imprimir" style="float: right;"><a href="#">Link</a></span></h3>
@@ -102,6 +97,8 @@
         <h3>Profesor particular en matemáticas y físicas</h3>
         <p>Desde 2017 hasta el 2023, llevé adelante el dictado de clases para alumnos de primaria hasta universitarios que requerían apoyo especial en estas áreas.</p>
         <br>
+        </div>
+
         <!--ESTUDIOS-->
         <h2 class="section" id="estudios">Estudios</h2>
         <hr>
@@ -109,22 +106,22 @@
             <tr>
                 <th>Actualidad</th>
                 <th>&emsp;</th>
-                <th>CURSO PROGRAMACIÓN WEB CFP 413</th>
+                <td>CURSO PROGRAMACIÓN WEB CFP 413</td>
             </tr>
             <tr>
                 <th>2023 - Actualidad</th>
                 <th>&emsp;</th>
-                <th>Estudiante de Ingeniería de sistemas</th>
+                <td>Estudiante de Ingeniería de sistemas</td>
             </tr>
             <tr>
                 <th>2012 - 2023</th>
                 <th>&emsp;</th>
-                <th>Estudiante de Ingeniería Electromecánica</th>
+                <td>Estudiante de Ingeniería Electromecánica</td>
             </tr>
             <tr>
                 <th>2012</th>
                 <th>&emsp;</th>
-                <th>Egresado en Escuela Educación Media N°32 - Bachiller en Ciencias Sociales</th>
+                <td>Egresado en Escuela Educación Media N°32 - Bachiller en Ciencias Sociales</td>
             </tr>
         </table>
         <br>
@@ -133,77 +130,50 @@
         <hr>
         <table>
             <tr>
-                <td><b>Desarrollo web</b></td>
-                <td>&emsp;</td>
+                <th>Desarrollo web</th>
+                <th>&emsp;</th>
                 <td>Conocimiento de lenguajes de programación como Python, JavaScript, HTML y CSS, Wordpress</td>
             </tr>
             <tr>
-                <td><b>Ofimática</b></td>
-                <td>&emsp;</td>
+                <th>Ofimática</th>
+                <th>&emsp;</th>
                 <td>Conocimiento de paquetes de ofimática como Microsoft Office, Google Docs y Google Sheets</td>
             </tr>
             <tr>
-                <td><b>Idiomas</b></td>
-                <td>&emsp;</td>
+                <th>Idiomas</th>
+                <th>&emsp;</th>
                 <td>Español: Nativo, Inglés: Nivel B2</td>
             </tr>
         </table>
+        <br>
         <!--HABILIDADES-->
         <h2 class="section" id="habilidades">Habilidades</h2>
         <hr>
         <table>
+
             <tr>
-                <td><b>Dedicación</b></td>
-                <td>&emsp;</td>
+                <th>Responsabilidad</th>
+                <th>&emsp;</th>
+                <td>Actitud comprometida con los clientes y compañeros</td>
+            </tr>
+            <tr>
+                <th>Dedicación</th>
+                <th>&emsp;</th>
                 <td>Comprometido con los proyectos de principio a fin</td>
             </tr>
             <tr>
-                <td><b>Comunicación</b></td>
-                <td>&emsp;</td>
+                <th>Comunicación</th>
+                <th>&emsp;</th>
                 <td>Buena disposición a escuchar y atender problemáticas</td>
-            </tr>
-            <tr>
-                <td><b>Responsabilidad</b></td>
-                <td>&emsp;</td>
-                <td>Actitud comprometida con los clientes y compañeros</td>
             </tr>
         </table>
     </section>
 
     <footer>
-        <p style="text-align: center;">Made with love by <a href="#">Me</a> - 2024</p>
+        <p class="ocultar-al-imprimir" style="text-align: center;">Made with love by <a href="#">Me</a> - 2024</p>
     </footer>
-
-    <script>
-        window.onload = function() {
-            if (window.location.hash) {
-                const hash = window.location.hash; // obtiene el hash de la URL
-                const targetElement = document.querySelector(hash);
-                if (targetElement) {
-                    targetElement.classList.add('highlight'); // añade la clase para resaltar
-                }
-            }
-
-            // Agregar event listeners para los enlaces
-            const links = document.querySelectorAll('.nav a');
-            links.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    // Quitar el resaltado de todos los elementos resaltados
-                    const highlightedElements = document.querySelectorAll('.highlight');
-                    highlightedElements.forEach(el => {
-                        el.classList.remove('highlight');
-                    });
-
-                    // Obtener el hash del enlace clicado
-                    const hash = this.getAttribute('href');
-                    const targetElement = document.querySelector(hash);
-                    if (targetElement) {
-                        targetElement.classList.add('highlight'); // añadir clase de resaltado
-                    }
-                });
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
+
 
 </html>

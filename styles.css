@@ -99,5 +99,7 @@ ul, ol {
 }
 
 .highlight {
-    background-color: yellow; /* O el estilo que prefieras */
+    background-color: rgb(134, 134, 60);
+    transition: background-color 0.5s ease;
+
 }
