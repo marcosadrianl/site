@@ -5,33 +5,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Marcos Lucas CV</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico">
+    <title>Marcos Lucas Online CV</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" />
+    <style>
+        .highlight {
+            background-color: yellow; /* O el estilo que prefieras */
+        }
+    </style>
 </head>
 
 <body>
     <header>
+        <!--MENU-->
+        <div class="header ocultar-al-imprimir">
+            <ul class="nav">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="#">Diseño Web</a></li>
+                        <li><a href="#">Desarrollo Web</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About me</a>
+                    <ul class="submenu">
+                        <li><a href="#">Mis Redes</a>
+                            <ul class="submenu">
+                                <li><a href="https://www.facebook.com/profile.php?id=100010639538519" target="_blank">Facebook</a></li>
+                                <li><a href="https://www.instagram.com/marcosadrianl/" target="_blank">Instagram</a></li>
+                                <li><a href="https://x.com/MarcosAdrianL" target="_blank">X</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#estudios">Mis Estudios</a></li>
+                        <li><a href="#conocimientos">Mis Conocimientos</a></li>
+                        <li><a href="#habilidades">Mis Habilidades</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <br>
+
+        <!--NOMBRE Y REDES SOCIALES-->
         <h1 class="center">Marcos Adrian Lucas</h1>
-        
-        <!--REDES SOCIALES-->
+
+        <!--CONTACTO-->
         <nav class="center special-font">
-            <img src="https://img.icons8.com/?size=256&id=8808&format=png" class="img-icon">
+            <img src="https://img.icons8.com/?size=256&id=8808&format=png" class="img-icon" alt="LinkedIn Icon">
             <a href="https://www.linkedin.com/in/marcos-lucas-733832161/" target="_blank">Marcos Lucas |</a>
-            <img src="https://img.icons8.com/?size=256&id=106564&format=png" class="img-icon">
+            <img src="https://img.icons8.com/?size=256&id=106564&format=png" class="img-icon" alt="GitHub Icon">
             <a href="https://github.com/marcosadrianl" target="_blank">marcosadrianl |</a>
-            <img src="https://img.icons8.com/?size=256&id=85500&format=png" class="img-icon">
-            <a href="mailto:lucas.adrmarcos@gmail.com" target="_blank">lucas.adrmarcos@gmail.com |</a>
-            <img src="https://img.icons8.com/?size=256&id=16733&format=png" class="img-icon">
+            <img src="https://img.icons8.com/?size=256&id=85500&format=png" class="img-icon" alt="Email Icon">
+            <a href="mailto:lucas.adrmarcos@gmail.com">lucas.adrmarcos@gmail.com |</a>
+            <img src="https://img.icons8.com/?size=256&id=16733&format=png" class="img-icon" alt="WhatsApp Icon">
             <a href="http://wa.me/5492214958407" target="_blank">+54 9 221 4958407</a>
         </nav>
     </header>
+
     <section>
         <br>
         <!--SUMARIO-->
-        <div class="ocultar-al-imprimir"><h2 class="section">Sumario</h2>
-        <hr>
-        <p>Este CV también se puede descargar desde <a href="https://marcosadrianl.github.io/site/MarcosLucasCV.pdf" target="_blank">aquí</a></p>
+        <div class="ocultar-al-imprimir">
+            <h2 class="section">Sumario</h2>
+            <hr>
+            <p>Este CV también se puede imprimir desde <span onclick="window.print()" style="cursor: pointer;">aquí</span></p>
         </div>
         <br>
 
@@ -45,55 +82,55 @@
         <p>Canalización e Instalación de circuitos eléctricos de baja tensión en Templos y Comercios. (2024)</p>
         <h3>Profesor Particular en Matemática y Física</h3>
         <p>Dictado de clases de apoyo escolar y universitario en las áreas de matemáticas y física. (2016 - 2023)</p>
-        <h3>Asesor Inmobiliario en Century21</h3>
+        <h3>Asesor Inmobiliario en Century21 Argentina</h3>
         <p>Como asesor llevé adelante procesos de compra-venta de inmuebles, capacitándome en los cursos de Century21 Argentina. (2018 - 2020)</p>
-        
+
         <br>
 
         <!--PROYECTOS-->
         <h2 class="section">Proyectos</h2>
         <hr>
-        <h3>Laboratorio físico: Cálculo del mu estático y dinámico de un sistema<span style="float: right;"><a href="#">Link</a></span></h3>
-        <p>Mediante elementos mecánicos y electrónicos, desarrollamos un software en Arduino que permite registrar el ángulo de inclinación al momento de producirse el movimiento de la pieza. Luego, mediante el uso de Arduino y MyOpenLab se desarrolló un software que permite visualizar los datos registrados en tiempo real, así como también calcular el mu dinámico y estático de la pieza.</p>
+        <h3>Laboratorio físico: Cálculo del mu estático y dinámico de un sistema<span class="ocultar-al-imprimir" style="float: right;"><a href="#">Link</a></span></h3>
+        <p>Mediante elementos mecánicos y electrónicos, desarrollamos un software en Arduino+firmata que permite registrar el ángulo de inclinación al momento de producirse el movimiento de la pieza. Luego, mediante el uso de Arduino y MyOpenLab se desarrolló un software que permite visualizar los datos registrados en tiempo real, así como también calcular el mu dinámico y estático de la pieza.</p>
 
-        <h3>Desarrollo de software controlador para adquisidor de Datos P-rho<span style="float: right;"><a href="#">Link</a></span></h3>
+        <h3>Desarrollo de software controlador para adquisidor de Datos P-rho<span class="ocultar-al-imprimir" style="float: right;"><a href="#">Link</a></span></h3>
         <p>Junto a un equipo de trabajo en el Laboratorio de Investigación en Educación de las Ciencias, desarrollamos el software para el adquisidor de datos de P-rho, utilizando lenguaje Python. Este software permite a los usuarios visualizar los datos del P-rho en tiempo real, así como también medir valores de tensiones y corrientes, además de generar gráficas de las mismas.</p>
 
         <h3>Diseño, desarrollo y creación de Circuitos PCB</h3>
-        <p>De manera individual, me embarque en la investigación para desarrollar circuitos de audio de baja distorción armonica, empleando software de diseño como EasyEDA y EAGLE para el diseño de circuitos. Luego, mediante distintos metodos, llevar adelante la creacion y puesta en prueba de los mismos</p>
-        <p>Entre los proyectos desarrollados, puedo mencionar filtros activos de segundo orden (Audio), Fuentes de energia de bajo voltaje y Adaptadores de impedancia activos</p>
+        <p>De manera individual, me embarque en la investigación para desarrollar circuitos de audio de baja distorsión armónica, empleando software de diseño como EasyEDA y EAGLE para el diseño de circuitos. Luego, mediante distintos métodos, llevar adelante la creación y puesta en prueba de los mismos.</p>
+        <p>Entre los proyectos desarrollados, puedo mencionar filtros activos de segundo orden (Audio), Fuentes con bajo nivel de ruido (ripple) y Adaptadores de impedancia activos (Audio).</p>
 
         <h3>Profesor particular en matemáticas y físicas</h3>
-        <p>Desde 2017 hasta el 2023, lleve adelante el dictado de clases para alumnos de primaia hasta universitarios que requerian apoyo especial en estas areas.</p>
+        <p>Desde 2017 hasta el 2023, llevé adelante el dictado de clases para alumnos de primaria hasta universitarios que requerían apoyo especial en estas áreas.</p>
         <br>
         <!--ESTUDIOS-->
-        <h2 class="section">Estudios</h2>
+        <h2 class="section" id="estudios">Estudios</h2>
         <hr>
         <table>
             <tr>
-                <th style="text-align: left;">Actualidad</th>
+                <th>Actualidad</th>
                 <th>&emsp;</th>
-                <th style="text-align: left;">CURSO PROGRAMACIÓN WEB CFP 413</th>
+                <th>CURSO PROGRAMACIÓN WEB CFP 413</th>
             </tr>
             <tr>
-                <th style="text-align: left;">2023 - Actualidad</th>
+                <th>2023 - Actualidad</th>
                 <th>&emsp;</th>
-                <th style="text-align: left;">Estudiante de Ingeniería de sistemas</th>
-            </tr> 
-            <tr>
-                <th style="text-align: left;">2012 - 2023</th>
-                <th>&emsp;</th>
-                <th style="text-align: left;">Estudiante de Ingeniería Electromecánica</th>
+                <th>Estudiante de Ingeniería de sistemas</th>
             </tr>
             <tr>
-                <th style="text-align: left;">2006 - 2012</th>
+                <th>2012 - 2023</th>
                 <th>&emsp;</th>
-                <th style="text-align: left;">Egresado en Escuela Educación Media N°32 - Bachiller en Ciencias Sociales</th>
-            </tr>    
+                <th>Estudiante de Ingeniería Electromecánica</th>
+            </tr>
+            <tr>
+                <th>2012</th>
+                <th>&emsp;</th>
+                <th>Egresado en Escuela Educación Media N°32 - Bachiller en Ciencias Sociales</th>
+            </tr>
         </table>
         <br>
         <!--CONOCIMIENTOS-->
-        <h2 class="section">Conocimientos</h2>
+        <h2 class="section" id="conocimientos">Conocimientos</h2>
         <hr>
         <table>
             <tr>
@@ -113,7 +150,7 @@
             </tr>
         </table>
         <!--HABILIDADES-->
-        <h2 class="section">Habilidades</h2>
+        <h2 class="section" id="habilidades">Habilidades</h2>
         <hr>
         <table>
             <tr>
@@ -133,8 +170,41 @@
             </tr>
         </table>
     </section>
+
     <footer>
-        <p style="text-align: center;">made with love by <a href="#">Me</a> - 2024</p>
+        <p style="text-align: center;">Made with love by <a href="#">Me</a> - 2024</p>
     </footer>
+
+    <script>
+        window.onload = function() {
+            if (window.location.hash) {
+                const hash = window.location.hash; // obtiene el hash de la URL
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    targetElement.classList.add('highlight'); // añade la clase para resaltar
+                }
+            }
+
+            // Agregar event listeners para los enlaces
+            const links = document.querySelectorAll('.nav a');
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    // Quitar el resaltado de todos los elementos resaltados
+                    const highlightedElements = document.querySelectorAll('.highlight');
+                    highlightedElements.forEach(el => {
+                        el.classList.remove('highlight');
+                    });
+
+                    // Obtener el hash del enlace clicado
+                    const hash = this.getAttribute('href');
+                    const targetElement = document.querySelector(hash);
+                    if (targetElement) {
+                        targetElement.classList.add('highlight'); // añadir clase de resaltado
+                    }
+                });
+            });
+        }
+    </script>
 </body>
+
 </html>
