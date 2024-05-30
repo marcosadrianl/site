@@ -104,7 +104,17 @@ ul, ol {
 }
 
 .img-perfil {
-    height: 125px; 
-    display: block; 
+    width: 10vw; /* 10% del ancho de la ventana de visualización */
+    height: 10vw; /* mantiene la relación de aspecto cuadrada */
     border-radius: 50%;
+    display: block;
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .img-perfil {
+        width: 10vw; /* un tamaño an más grande en pantallas muy pequeñas */
+        height: 10vw;
+    }
+
 }
