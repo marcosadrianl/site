@@ -10,7 +10,13 @@ a {
     text-decoration: none;
 }
 
+hr {
+    height: 3px;
+    background-color: #000;
+}
+
 table tr th {
+
     text-align: left;
 }
 
@@ -27,18 +33,19 @@ table tr td {
 }
 
 .imgcent {
-    vertical-align: bottom;
+    vertical-align: middle;
 }
+
 
 .center {
     text-align: center;
 }
 
 .img-icon { /* Esto es para que las imagenes de los iconos tengan el mismo tamaño */
-    width: 25px;
-    height: 25px;
+    width: 4%;
+    height: 4%;
     margin-right: 0px;
-    vertical-align: bottom;
+    vertical-align: middle;
 }
 
 .special-font { /* Esto es para que el texto sea más grande y en negrita */
@@ -114,17 +121,19 @@ ul, ol {
 
     display: block;
     position: absolute;
+    top: 40px;
     left: 20px;
 }
 
 
+
 /* Ajustes para pantallas muy pequeñas */
-@media (max-width: 650px) {
+@media (max-width: 720px) {
     .img-perfil {
         /* un tamaño an más grande en pantallas muy pequeñas*/
         width: 10vw; 
         height: 10vw;
         transition: width 0.5s ease, height 0.5s ease;
-
+    border-radius: 50%;
     }
 }
