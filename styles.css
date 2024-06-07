@@ -1,5 +1,5 @@
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px;
     margin: 0px 20px 0px 20px;
     background-color: #b8b8b8;
@@ -28,14 +28,13 @@ table tr td {
     text-align: right;
 }
 
-.section {
-    line-height: 0; /* Esto es para que los titulos no tengan un espacio entre lineas */
+.section, h3 {
+    line-height: 0; /* Esto es para que los subtitulos no tengan un espacio entre lineas */
 }
 
 .imgcent {
     vertical-align: middle;
 }
-
 
 .center {
     text-align: center;
@@ -73,7 +72,12 @@ table tr td {
     padding-left: 25px;
     padding-right: 0px;
     margin-bottom: 0px;
+}
 
+.nav a:hover {
+    font-size: 120%;
+    transition: 0.3s ease;
+    background-color: #555;
 }
 
 ul, ol {
@@ -86,11 +90,8 @@ ul, ol {
     text-decoration: none;
     padding: 5px 25px 5px 25px; 
     display: block;
+    transition: 0.4s ease;
 }
-.nav li a:hover{
-    background-color: #555;
-}
-
 .nav > li {
     float: left;
 }
@@ -118,7 +119,6 @@ ul, ol {
     width: 120px; /* 10% del ancho de la ventana de visualización */
     height: 120px; /* mantiene la relación de aspecto cuadrada */
     border-radius: 50%;
-
     display: block;
     position: absolute;
     top: 40px;
@@ -131,9 +131,9 @@ ul, ol {
 @media (max-width: 720px) {
     .img-perfil {
         /* un tamaño an más grande en pantallas muy pequeñas*/
-        width: 10vw; 
-        height: 10vw;
-        transition: width 0.5s ease, height 0.5s ease;
-    border-radius: 50%;
+        width: 15vw; 
+        height: 15vw;
+        transition: 0.3s ease;
+        border-radius: 50%;
     }
 }
