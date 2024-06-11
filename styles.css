@@ -24,6 +24,11 @@ table tr td {
     text-align: left;
 }
 
+.sumario {
+    cursor: pointer; 
+    text-decoration: underline;
+}
+
 .link {
     text-align: right;
 }
@@ -111,15 +116,15 @@ ul, ol {
 }
 
 .nav li ul li ul{
-    right: -140px;
     top: 0px;
+    left: 140px;
 }
 
 .img-perfil {
-    width: 120px; /* 10% del ancho de la ventana de visualización */
-    height: 120px; /* mantiene la relación de aspecto cuadrada */
+    border-style: double;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    display: block;
     position: absolute;
     top: 40px;
     left: 20px;
@@ -130,10 +135,16 @@ ul, ol {
 /* Ajustes para pantallas muy pequeñas */
 @media (max-width: 720px) {
     .img-perfil {
-        /* un tamaño an más grande en pantallas muy pequeñas*/
         width: 15vw; 
         height: 15vw;
         transition: 0.3s ease;
-        border-radius: 50%;
+    }
+}
+
+@media (max-width: 420px) {
+    .img-perfil {
+        width: 5vw; 
+        height: 5vw;
+        transition: 0.3s ease;
     }
 }

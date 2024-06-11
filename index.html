@@ -7,79 +7,61 @@
     <title>Marcos Lucas Online CV</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" sizes="16x16"  href="favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
     <header>
         <!--MENU-->
-        <div class="header ocultar-al-imprimir">
+        <nav class="header ocultar-al-imprimir">
             <ul class="nav">
                 <li><a href="#" title="Inicio">Inicio</a></li>
                 <li><a href="#" title="Servicios">Servicios</a>
                     <ul class="submenu">
-
                         <li><a href="#" title="Diseño Web">Diseño Web</a></li>
                         <li><a href="#" title="Desarrollo Web">Desarrollo Web</a></li>
                     </ul>
-
                 </li>
                 <li><a href="#" title="Sobre mi">About me</a>
                     <ul class="submenu">
                         <li><a href="#" title="Mis Redes">Mis Redes</a>
-
                             <ul class="submenu">
                                 <li><a href="https://www.facebook.com/profile.php?id=100010639538519" target="_blank" title="Facebook">Facebook</a></li>
                                 <li><a href="https://www.instagram.com/marcosadrianl/" target="_blank" title="Instagram">Instagram</a></li>
-
                                 <li><a href="https://x.com/MarcosAdrianL" target="_blank" title="Twitter">X</a></li>
                             </ul>
                         </li>
-
-
                         <li><a href="#estudios" title="Mis Estudios">Mis Estudios</a></li>
                         <li><a href="#conocimientos" title="Mis Conocimientos">Mis Conocimientos</a></li>
                         <li><a href="#habilidades" title="Mis Habilidades">Mis Habilidades</a></li>
-
                     </ul>
                 </li>
                 <li><a href="https://marcosadrianl.github.io/site/contacto.html" title="Ir a pagina de contacto">Contacto</a></li>
             </ul>
-        </div>
-
-
+        </nav>
         <br>
-
         <!--IMAGEN DE PERFIL-->
         <div >
             <img src="profile-picture.png" alt="Mi imagen de perfil" class="img-perfil" >
         </div>
-
-
         <!--NOMBRE Y REDES SOCIALES-->
         <h1 class="center">Marcos Adrian Lucas</h1>
         <!--CONTACTO-->
-        <nav class="center special-font">
+        <div class="center special-font">
             <p><img src="https://img.icons8.com/?size=256&id=8808&format=png" class="img-icon" alt="LinkedIn Icon">
             <a href="https://www.linkedin.com/in/marcos-lucas-733832161/" target="_blank">Marcos Lucas</a> |
             <img src="https://img.icons8.com/?size=256&id=106564&format=png" class="img-icon" alt="GitHub Icon">
             <a href="https://github.com/marcosadrianl" target="_blank">marcosadrianl</a></p>
-            </nav>
+        </div>
     </header>
-
-
     <section>
-        
         <!--SUMARIO-->
         <div class="ocultar-al-imprimir">
             <br>
             <h2 class="section">Sumario</h2>
             <hr>
-            <p>Este CV también se puede imprimir desde <span onclick="window.print()" style="cursor: pointer; text-decoration: underline;" title="Imprimir CV, recomiendo tamaño Oficio">aquí</span></p>
+            <p>Este CV se puede imprimir desde <span onclick="window.print()" class="sumario" title="Imprimir CV, recomiendo tamaño Oficio">aquí</span></p>
             <br>
         </div>
-
         <!--ESTUDIOS-->
         <h2 class="section" id="estudios">Estudios</h2>
         <hr>
@@ -105,7 +87,7 @@
                 <td>Egresado en Escuela <b>Educación Media N°32</b>: Bachiller en Ciencias Sociales</td>
             </tr>
         </table>
-        <br>
+        <br class="ocultar-al-imprimir">
         <!--CONOCIMIENTOS-->
         <h2 class="section" id="conocimientos">Conocimientos</h2>
         <hr>
@@ -127,7 +109,6 @@
             </tr>
         </table>
         <br>
-     
         <!--EXPERIENCIA LABORAL-->
         <h2 class="section">Experiencia Laboral</h2>
         <hr>
@@ -142,31 +123,25 @@
             <p>Dictado de clases de apoyo escolar y universitario en las áreas de matemáticas y física. (2016 - 2023)</p>
         </span>
         <br>
-
         <!--PROYECTOS-->
         <div class="ocultar-al-imprimir"> 
-        <h2 class="section">Proyectos</h2>
-        <hr>
-        <h3>Laboratorio físico: Cálculo del mu estático y dinámico de un sistema<span class="ocultar-al-imprimir" style="float: right;"><a href="#">Link</a></span></h3>
-        <p>Mediante elementos mecánicos y electrónicos, desarrollamos un software en Arduino+firmata que permite registrar el ángulo de inclinación al momento de producirse el movimiento de la pieza. Luego, mediante el uso de Arduino y MyOpenLab se desarrolló un software que permite visualizar los datos registrados en tiempo real, así como también calcular el mu dinámico y estático de la pieza.</p>
-
-        <h3>Desarrollo de software controlador para adquisidor de Datos P-rho<span class="ocultar-al-imprimir" style="float: right;"><a href="#">Link</a></span></h3>
-        <p>Junto a un equipo de trabajo en el Laboratorio de Investigación en Educación de las Ciencias, desarrollamos el software para el adquisidor de datos de P-rho, utilizando lenguaje Python. Este software permite a los usuarios visualizar los datos del P-rho en tiempo real, así como también medir valores de tensiones y corrientes, además de generar gráficas de las mismas.</p>
-
-        <h3>Diseño, desarrollo y creación de Circuitos PCB</h3>
-        <p>De manera individual, me embarque en la investigación para desarrollar circuitos de audio de baja distorsión armónica, empleando software de diseño como EasyEDA y EAGLE para el diseño de circuitos. Luego, mediante distintos métodos, llevar adelante la creación y puesta en prueba de los mismos.</p>
-        <p>Entre los proyectos desarrollados, puedo mencionar filtros activos de segundo orden (Audio), Fuentes con bajo nivel de ruido (ripple) y Adaptadores de impedancia activos (Audio).</p>
-
-        <h3>Profesor particular en matemáticas y físicas</h3>
-        <p>Desde 2017 hasta el 2023, llevé adelante el dictado de clases para alumnos de primaria hasta universitarios que requerían apoyo especial en estas áreas.</p>
-        <br>
+            <h2 class="section">Proyectos</h2>
+            <hr>
+            <h3>Laboratorio físico: Cálculo del mu estático y dinámico de un sistema<span class="ocultar-al-imprimir" style="float: right;"><a href="#">Link</a></span></h3>
+            <p>Mediante elementos mecánicos y electrónicos, desarrollamos un software en Arduino+firmata que permite registrar el ángulo de inclinación al momento de producirse el movimiento de la pieza. Luego, mediante el uso de Arduino y MyOpenLab se desarrolló un software que permite visualizar los datos registrados en tiempo real, así como también calcular el mu dinámico y estático de la pieza.</p>
+            <h3>Desarrollo de software controlador para adquisidor de Datos P-rho<span class="ocultar-al-imprimir" style="float: right;"><a href="#">Link</a></span></h3>
+            <p>Junto a un equipo de trabajo en el Laboratorio de Investigación en Educación de las Ciencias, desarrollamos el software para el adquisidor de datos de P-rho, utilizando lenguaje Python. Este software permite a los usuarios visualizar los datos del P-rho en tiempo real, así como también medir valores de tensiones y corrientes, además de generar gráficas de las mismas.</p>
+            <h3>Diseño, desarrollo y creación de Circuitos PCB</h3>
+            <p>De manera individual, me embarque en la investigación para desarrollar circuitos de audio de baja distorsión armónica, empleando software de diseño como EasyEDA y EAGLE para el diseño de circuitos. Luego, mediante distintos métodos, llevar adelante la creación y puesta en prueba de los mismos.</p>
+            <p>Entre los proyectos desarrollados, puedo mencionar filtros activos de segundo orden (Audio), Fuentes con bajo nivel de ruido (ripple) y Adaptadores de impedancia activos (Audio).</p>
+            <h3>Profesor particular en matemáticas y físicas</h3>
+            <p>Desde 2017 hasta el 2023, llevé adelante el dictado de clases para alumnos de primaria hasta universitarios que requerían apoyo especial en estas áreas.</p>
+            <br>
         </div>
-
         <!--HABILIDADES-->
         <h2 class="section" id="habilidades">Habilidades</h2>
         <hr>
         <table>
-
             <tr>
                 <th>Responsabilidad</th>
                 <th>&emsp;</th>
@@ -189,6 +164,4 @@
         <p class="ocultar-al-imprimir" style="text-align: center; position: relative; margin-bottom: 0px; width: 100%;">Made with love by <a href="#">Me</a> - 2024</p>
     </footer>
 </body>
-
-
 </html>
