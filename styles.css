@@ -1,13 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 0px;
-    margin: 0px 20px 0px 20px;
-    background-color: #b8b8b8;
+    background-color: cornsilk;
+}
+
+.title-header {
+    padding: 0 20px;
+    position: relative;
+    width: 100vw;
+    height: 130px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+}
+
+.img-content {
+    position: absolute;
+    left: 20px;
+}
+
+.title-content {
+    position: absolute;
+    width: 100vw;
+    padding: 20px;
+    text-align: center;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    color:#4c4e58 ;
 }
 
 hr {
@@ -16,7 +41,6 @@ hr {
 }
 
 table tr th {
-
     text-align: left;
 }
 
@@ -30,19 +54,19 @@ table tr td {
 }
 
 .link {
-    text-align: right;
+    float: right;
 }
 
-.section, h3 {
+.section {
     line-height: 0; /* Esto es para que los subtitulos no tengan un espacio entre lineas */
+    margin-bottom: 15px;
+    
 }
 
-.imgcent {
-    vertical-align: middle;
-}
+.center {position: relative;
+    width: 100vw;
+    margin: 0 auto;
 
-.center {
-    text-align: center;
 }
 
 .img-icon { /* Esto es para que las imagenes de los iconos tengan el mismo tamaño */
@@ -53,7 +77,7 @@ table tr td {
 }
 
 .special-font { /* Esto es para que el texto sea más grande y en negrita */
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -64,23 +88,35 @@ table tr td {
   .ocultar-al-imprimir {
     display: none;
   }
+
+  .title-header {
+    padding: 0 20px;
+    position: relative;
+    width: 100vw;
+    height: 130px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center;
 }
 
-.header{
-    margin: 0 auto;
-    width: 500px;
-    
+}
+
+.nav-header {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100vw;
+    height: 35px; /* Para centrar también verticalmente si el contenedor tiene altura */
+    background-color: #333;
 }
 
 .nav {
-    margin-top: 0px;
-    padding-left: 25px;
-    padding-right: 0px;
-    margin-bottom: 0px;
+    width: 100%;
+    padding: 0px;
+    text-align: center;
 }
 
 .nav a:hover {
-    font-size: 120%;
     transition: 0.3s ease;
     background-color: #555;
 }
@@ -105,6 +141,7 @@ ul, ol {
     display: none;
     position: absolute;
     min-width: 140px;
+    z-index: 1;
 }
 
 .nav li:hover > ul {
@@ -125,26 +162,18 @@ ul, ol {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    position: absolute;
-    top: 40px;
-    left: 20px;
 }
 
-
-
-/* Ajustes para pantallas muy pequeñas */
-@media (max-width: 720px) {
+@media (min-width: 412px) and (max-width: 700px){
     .img-perfil {
-        width: 15vw; 
-        height: 15vw;
-        transition: 0.3s ease;
+        display: none;
     }
-}
 
-@media (max-width: 420px) {
-    .img-perfil {
-        width: 5vw; 
-        height: 5vw;
-        transition: 0.3s ease;
+    .nav-header {
+        width: 110vw;
+    }
+
+    h2, h3 {
+        margin-top: 10px;
     }
 }
