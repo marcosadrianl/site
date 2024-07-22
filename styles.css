@@ -6,12 +6,14 @@
 body {
     font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: cornsilk;
+    margin: 0 10px;
+    max-width: 1500px;
 }
 
 .title-header {
-    padding: 0 20px;
+    padding: 0;
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 130px;
     display: flex;
     align-items: center; /* Centra verticalmente */
@@ -20,13 +22,22 @@ body {
 
 .img-content {
     position: absolute;
+    display: flex;
+    flex-direction: row;
     left: 20px;
 }
 
+.img-content p {
+    margin-left: 10px;
+}
+.img-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+}
+
 .title-content {
-    position: absolute;
-    width: 100vw;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -36,47 +47,34 @@ a {
 }
 
 hr {
-    height: 3px;
+    height: 2px;
     background-color: #000;
 }
 
-h2 {
+.seccion {
+    display: flex;
+    flex-direction: column;
+}
+.seccion-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.seccion-descripcion {
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    margin-right: 0px;
+}
+
+.descripcion-item{
     margin-top: 10px;
 }
 
-table tr th {
-    text-align: left;
-}
-
-table tr td {
-    text-align: left;
-}
-
-.sumario {
-    cursor: pointer; 
-    text-decoration: underline;
-}
-
-.link {
-    float: right;
-}
-
-.section {
-    line-height: 0; /* Esto es para que los subtitulos no tengan un espacio entre lineas */
-    margin-bottom: 15px;
-    
-}
-
-.center {position: relative;
-    width: 100vw;
-    margin: 0 auto;
-
-}
-
 .img-icon { /* Esto es para que las imagenes de los iconos tengan el mismo tamaño */
-    width: 4%;
-    height: 4%;
-    margin-right: 0px;
+    width: 2vw;
+    height: 2vw;
     vertical-align: middle;
 }
 
@@ -109,15 +107,16 @@ table tr td {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
-    width: 100vw;
-    height: 35px; /* Para centrar también verticalmente si el contenedor tiene altura */
+    width: 100%;
+    height: 35px;
+    margin-bottom: 20px; /* Para centrar también verticalmente si el contenedor tiene altura */
     background-color: #333;
 }
 
 .nav {
     width: 100%;
     padding: 0px;
-    text-align: center;
+    text-align: left;
 }
 
 .nav a:hover {
@@ -154,30 +153,69 @@ ul, ol {
 
 .nav li ul li{
     position: relative;
+    
 }
 
 .nav li ul li ul{
     top: 0px;
     left: 140px;
+    border: 1px solid cornsilk;
 }
 
-.img-perfil {
-    border-style: double;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-}
-
-@media (min-width: 412px) and (max-width: 700px){
+/* ------------------------------------------RESPONSIVE------------------------------------------ */
+@media (max-width: 450px){
+    body {
+        margin:  0 5px;
+    }
+    
+    .img-content {
+        display: none;
+    }
+    
+    .img-content p {
+        display: none;
+    }
     .img-perfil {
         display: none;
     }
-
-    .nav-header {
-        width: 110vw;
+    .seccion-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin-bottom: 10px;
     }
-
-    h2, h3 {
+    
+    .seccion-descripcion {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0px;
+    }
+    
+    .descripcion-item{
         margin-top: 10px;
+        
     }
+    
+    .img-icon { /* Esto es para que las imagenes de los iconos tengan el mismo tamaño */
+        width: 6vw;
+        height: 6vw;
+        vertical-align: bottom;
+    }
+    
+    .special-font { /* Esto es para que el texto sea más grande y en negrita */
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .nav-header {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        width: 100%;
+        height: 35px;
+        margin-bottom: 20px; /* Para centrar también verticalmente si el contenedor tiene altura */
+        background-color: #333;
+        font-size: 3vw;
+    } 
 }

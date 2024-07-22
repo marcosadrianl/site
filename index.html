@@ -10,41 +10,44 @@
 </head>
 
 <body>
-<header>
-    <div class="nav-header" >
-        <div class="contenedor-nav ocultar-al-imprimir">
-            <!--MENU-->
-            <nav>
-                <ul class="nav">
-                    <li><a href="#" title="Inicio">Inicio</a></li>
-                    <li><a href="#" title="Servicios">Servicios</a>
-                        <ul class="submenu">
-                            <li><a href="https://marcosadrianl.github.io/site/home.html" title="Desarrollo Web">MARK! - Desarrollo Web</a></li>
-                            <!-- <li><a href="#" title="Diseño Web">Diseño Web</a></li> -->
-                            <li><a onclick="window.print()" class="sumario" title="Imprimir CV, recomiendo tamaño Oficio">Descargar CV</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" title="Sobre mi">About me</a>
-                        <ul class="submenu">
-                            <li><a href="#" title="Mis Redes">Mis Redes</a>
+    <header>
+        <nav>
+            <div class="nav-header" >
+                <div class="contenedor-nav ocultar-al-imprimir">
+                    <!--MENU-->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="#" title="Inicio">Inicio</a></li>
+                            <li><a href="#" title="Servicios">Servicios</a>
                                 <ul class="submenu">
-                                    <li><a href="https://www.facebook.com/profile.php?id=100010639538519" target="_blank" title="Facebook">Facebook</a></li>
-                                    <li><a href="https://www.instagram.com/marcosadrianl/" target="_blank" title="Instagram">Instagram</a></li>
-                                    <li><a href="https://x.com/MarcosAdrianL" target="_blank" title="Twitter">X</a></li>
+                                    <li><a href="https://marcosadrianl.github.io/site/home.html" title="MARK! - Desarrollo Web" target="_blank">Desarrollo Web</a></li>
+                                    <li><a href="#" onclick="window.print()" title="Descargar CV">Descargar CV</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#estudios" title="Mis Estudios">Mis Estudios</a></li>
-                            <li><a href="#conocimientos" title="Mis Conocimientos">Mis Conocimientos</a></li>
-                            <li><a href="#habilidades" title="Mis Habilidades">Mis Habilidades</a></li>
+                            <li><a href="#" title="Sobre mi">About me</a>
+                                <ul class="submenu">
+                                    <li><a href="#" title="Mis Redes">Mis Redes</a>
+                                        <ul class="submenu">
+                                            <li><a href="https://www.facebook.com/profile.php?id=100010639538519" target="_blank" title="Facebook">Facebook</a></li>
+                                            <li><a href="https://www.instagram.com/marcosadrianl/" target="_blank" title="Instagram">Instagram</a></li>
+                                            <li><a href="https://x.com/MarcosAdrianL" target="_blank" title="X">X</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#estudios" title="Mis Estudios">Mis Estudios</a></li>
+                                    <li><a href="#conocimientos" title="Mis Conocimientos">Mis Conocimientos</a></li>
+                                    <li><a href="#experiencia" title="Experiencia Laboral">Experiencia Laboral</a></li>
+                                    <li><a href="#proyectos" title="Mis Proyectos">Mis Proyectos</a></li>
+                                    <li><a href="#habilidades" title="Mis Habilidades">Mis Habilidades</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://marcosadrianl.github.io/site/contacto.html" title="Ir a pagina de contacto">Contacto</a></li>
                         </ul>
-                    </li>
-                    <li><a href="https://marcosadrianl.github.io/site/contacto.html" title="Ir a pagina de contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <br>
-
+                    </nav>
+                </div>
+            </div>
+        </nav>
+    </header>
+<main>
     <div class="title-header">
 
         <!--IMAGEN DE PERFIL-->
@@ -64,119 +67,137 @@
             </div>
         </div>
     </div>
-</header>
+</main>
 <section>
-    <!--SUMARIO
-    <div class="ocultar-al-imprimir">
-        <br>
-        <h2 class="section">Sumario</h2>
-        <hr>
-        <p>Este CV se puede imprimir desde <span onclick="window.print()" class="sumario" title="Imprimir CV, recomiendo tamaño Oficio">aquí</span></p>
-        
-    </div>-->
     <!--ESTUDIOS-->
     <br>
     <h2 class="section" id="estudios">Estudios</h2>
     <hr>
-    <table>
-        <tr>
-            <th>Actualidad</th>
-            <th>&emsp;</th>
-            <td>CURSO PROGRAMACIÓN WEB en <a href="https://umupla.wordpress.com/"><b>UMUPLA CFP 413</b></a></td>
-        </tr>
-        <tr>
-            <th>2023 - Actualidad</th>
-            <th>&emsp;</th>
-            <td>Estudiante de Ingeniería de sistemas en la <a href="https://www.frlp.utn.edu.ar/" target="_blank"><b>UTN FRLP</b></a></td>
-        </tr>
-        <tr>
-            <th>2012 - 2023</th>
-            <th>&emsp;</th>
-            <td>Estudiante de Ingeniería Electromecánica en <a href="https://ing.unlp.edu.ar/" target="_blank"><b>FI - UNLP</b></a></td>
-        </tr>
-        <tr>
-            <th>2012</th>
-            <th>&emsp;</th>
-            <td>Egresado en Escuela <a href="https://uanormal1-bue.infd.edu.ar/sitio/" target="_blank"><b>Educación Media N°32</b></a>: Bachiller en Ciencias Sociales</td>
-        </tr>
-    </table>
+    <div class="estudios">
+        <div class="seccion-item">
+            <h4 class="seccion-descripcion">2024 - Actualidad</h4>
+            <p>Curso de programación web en <a href="https://umupla.wordpress.com/"><b>UMUPLA CFP 413</b></a> - La PLata</p>
+        </div>
+        <div class="seccion-item">
+            <h4 class="seccion-descripcion">2023 - Actualidad</h4>
+            <p>Estudiante de 2do año de Ingeniería de sistemas en la <a href="https://www.frlp.utn.edu.ar/" target="_blank"><b>UTN FRLP</b></a></p>
+        </div>
+        <div class="seccion-item">
+            <h4 class="seccion-descripcion">2012 - 2023</h4>
+            <p>Estudiante de 4to año de Ingeniería electromecánica en <a href="https://ing.unlp.edu.ar/" target="_blank"><b>FI - UNLP</b></a></p>
+        </div>
+        <div class="seccion-item">
+            <h4 class="seccion-descripcion">2012</h4>
+            <p>Egresado en Escuela <a href="https://uanormal1-bue.infd.edu.ar/sitio/" target="_blank"><b>Educación Media N°32</b></a>: Bachiller en Ciencias Sociales</p>
+        </div>
+    </div>
     <br>
     <!--CONOCIMIENTOS-->
-    <h2 class="section" id="conocimientos">Conocimientos</h2>
+    <div id="conocimientos" class="ocultar-al-imprimir">
+    <h2 class="section" >Conocimientos</h2>
     <hr>
-    <table>
-        <tr>
-            <th>Desarrollo web</th>
-            <th>&emsp;</th>
-            <td>Conocimiento de lenguajes de programación como <b>Lenguaje C, JavaScript, HTML y CSS, Sitios de Google y Wordpress (Gutenberg)</b></td>
-        </tr>
-        <tr>
-            <th>Ofimática</th>
-            <th>&emsp;</th>
-            <td>Conocimiento de paquetes de ofimática como <b>Microsoft Office, Google Docs y Google Sheets</b></td>
-        </tr>
-        <tr>
-            <th>Idiomas</th>
-            <th>&emsp;</th>
-            <td>Español: Nativo, Inglés: Conversacional</td>
-        </tr>
-    </table>
+    <div>
+        <div class="seccion-item">
+            <h4 class="seccion-descripcion">Programación</h4>
+            <p>Conocimiento de lenguajes de programación como <b>Lenguaje C, Java, JavaScript, y Python</b>.</p>
+        </div>
+        <div class="seccion-item">
+            <h4 class="seccion-descripcion">Frameworks</h4>
+            <p>Conocimiento de frameworks como <b>Bootstrap, Tailwind CSS, ReactJS, Node.js</b>.</p>
+        </div>
+        <div class="seccion-item">
+            <h4 class="seccion-descripcion">Idiomas</h4>
+            <p>Español: Nativo <br> Inglés: Conversacional.</p>
+        </div>
+    </div>
     <br>
     <!--EXPERIENCIA LABORAL-->
-    <h2 class="section">Experiencia Laboral</h2>
-    <hr>
-    <h3>Colaborador en I.E.C. UTN La Plata</h3>
-    <p>Trabajo como colaborador en el desarrollo y entrega de software para el departamento de Física de la facultad. (Actualidad)</p>
-    <h3>Electricista en Comercios</h3>
-    <p>Canalización e Instalación de circuitos eléctricos de baja tensión en Templos y Comercios. (2024)</p>
-    <h3>Asesor Inmobiliario en Century21 Argentina</h3>
-    <p>Como asesor llevé adelante procesos de compra-venta de inmuebles, capacitándome en los cursos de Century21 Argentina. (2018 - 2020)</p>
-    <span class="ocultar-al-imprimir">
-        <h3>Profesor Particular en Matemáticas y Física</h3>
-        <p>Dictado de clases de apoyo escolar y universitario en las áreas de matemáticas y física. (2016 - 2023)</p>
-    </span>
+    <div id="experiencia" class="ocultar-al-imprimir">
+        <h2 class="section" >Experiencia Laboral</h2>
+        <hr>
+        <div class="descripcion-item">
+            <h4>Colaborador en I.E.C. UTN La Plata</h4>
+            <p>Trabajo como colaborador en el desarrollo y entrega de software para el departamento de Física de la facultad. (Actualidad)</p>
+        </div>
+        <div class="descripcion-item">
+            <h4>Electricista en Comercios</h4>
+            <p>Canalización e Instalación de circuitos eléctricos de baja tensión en Templos y Comercios. (2024)</p>
+        </div>
+        <div class="descripcion-item">
+            <h4>Asesor Inmobiliario en Century21 Argentina</h4>
+            <p>Como asesor llevé adelante procesos de compra-venta de inmuebles, capacitándome en los cursos de Century21 Argentina. (2018 - 2020)</p>
+        </div>
+        <div class="descripcion-item">
+            <h4>Profesor Particular en Matemáticas y Física</h4>
+            <p>Dictado de clases de apoyo escolar y universitario en las áreas de matemáticas y física. (2016 - 2023)</p>
+        </div>
+    </div>
     <br>
     <!--PROYECTOS-->
-    <div class="ocultar-al-imprimir"> 
-        <h2 class="section">Proyectos</h2>
+    <div id="proyectos" class="ocultar-al-imprimir"> 
+        <h2 class="section" id="proyectos">Proyectos</h2>
         <hr>
-        <h3>Laboratorio físico: Cálculo del mu estático de un sistema<span class="ocultar-al-imprimir link"><a href="#">Link</a></span></h3>
-        <p>Desarrollamos un software con <b>MyOpenLab</b> que permite registrar el ángulo de inclinación al momento de producirse el movimiento de la pieza para obtener el coeficiente de roce estatico.</p>
-        <h3>Laboratorio físico: Laboratorios Remotos<span class="ocultar-al-imprimir link"><a href="#">Link</a></span></h3>
-        <p>Estamos desarrollando un software mediante Arduino y Python para laboratorios de ensayos opticos y de gases, que se pueden ejecutar en tiempo real de manera remota.</p>
-        <h3>Desarrollo de software controlador para adquisidor de Datos<span class="ocultar-al-imprimir link"><a href="#">Link</a></span></h3>
-        <p>Junto con el equipo del area de Ingenieria en Sistemas, trabajo en el software para el adquisidor de datos del laboratorio, utilizando lenguaje Python. Este software permite a los usuarios visualizar los datos del adquisidor en tiempo real, así como también medir valores de tensiones y corrientes, además de generar gráficas de las mismas.</p>
-        <h3>Diseño, desarrollo y creación de Circuitos PCB</h3>
-        <p>En los laboratorios de electronica de la Facultad de Ingenieria de la UNLP, desarrolle circuitos de audio de baja distorsión armónica, empleando software de diseño como EasyEDA y EAGLE para el diseño de circuitos. Luego, mediante distintos métodos, llevar adelante la creación y puesta en prueba de los mismos.</p>
-        <p>Entre los proyectos desarrollados, puedo mencionar filtros activos de segundo orden (Audio), Fuentes con bajo nivel de ruido (ripple) y Adaptadores de impedancia activos (Audio).</p>
-        <h3>Profesor particular en matemáticas y físicas</h3>
-        <p>Desde 2017 hasta el 2023, llevé adelante el dictado de clases para alumnos de primaria hasta universitarios que requerían apoyo especial en estas áreas.</p>
-        <br>
+        <div class="descripcion-item">
+            <h3>Laboratorio físico: Cálculo del mu estático
+                <span class="ocultar-al-imprimir link">
+                    <a href="#">Link</a>
+                </span>
+            </h3>
+            <p>En los laboratorios del I.E.C. desarrollamos un software con <b>Arduino</b> empleando <b>MyOpenLab</b> que permite registrar el ángulo de inclinación al momento de producirse el movimiento de la pieza para obtener el coeficiente de roce estatico. Este programa se utilizara en los departamentos de Fisica de la UTN La Plata y en remoto por alumnos de la UTN regional Tucuman.</p>
+        </div>
+        <div class="descripcion-item">
+            <h3>Laboratorio físico: Laboratorios Remotos
+                <span class="ocultar-al-imprimir link">
+                    <a href="#">Link</a>
+                </span>
+            </h3>
+        <p>Continuamos desarrollando un software mediante <b>Arduino</b> y <b>Python</b> para laboratorios de ensayos opticos (Ley de Snell) y de gases (Ley de Boyle), que se pueden ejecutar en tiempo real de manera remota gracias a la integración del <b>Grupo <a href="https://codapli.frlp.utn.edu.ar/" target="_blank">CODAPLI</a></b>. Este software se ejecutara por alumnos de la UTN regional La Plata.</p>
+        </div>
+        <div class="descripcion-item">
+            <h3>Desarrollo de software controlador para adquisidor de Datos
+                <span class="ocultar-al-imprimir link">
+                    <a href="#">Link</a>
+                </span>
+            </h3>
+            <p>Junto con el equipo del area de Ingenieria en Sistemas, trabajo en el software para el adquisidor de datos del laboratorio, utilizando lenguaje Python. Este software permite a los usuarios visualizar los datos del adquisidor en tiempo real, así como también medir valores de tensiones y corrientes, además de generar gráficas de las mismas.</p>
+        </div>
+        <div class="descripcion-item">
+            <h3>Diseño, desarrollo y creación de Circuitos PCB</h3>
+            <p>En los laboratorios de electronica de la Facultad de Ingenieria de la UNLP, desarrolle circuitos de audio de baja distorsión armónica, empleando software de diseño como EasyEDA y EAGLE para el diseño de circuitos. Luego, mediante distintos métodos, llevar adelante la creación y puesta en prueba de los mismos.</p>
+            <p>Entre los proyectos desarrollados, puedo mencionar filtros activos de segundo orden (Audio), Fuentes con bajo nivel de ruido (ripple) y Adaptadores de impedancia activos (Audio).</p>
+        </div>
+        <div class="descripcion-item">
+            <h3>Profesor particular en matemáticas y físicas</h3>
+            <p>Desde 2017 hasta la actualidad, llevo adelante el dictado de clases para alumnos de primaria hasta universitarios que requieren apoyo especial en estas áreas. En esta etapa, pude desarrollar habilidades de comunicación y enseñanza. Compartir conocimientos y ayudar a los demás es algo que me apasiona.</p>
+        </div>
     </div>
+    <br>
     <!--HABILIDADES-->
     <h2 class="section" id="habilidades">Habilidades</h2>
     <hr>
-    <table>
-        <tr>
-            <th>Responsabilidad</th>
-            <th>&emsp;</th>
-            <td>Actitud comprometida con los clientes, compañeros y los proyectos a desarrollar.</td>
-        </tr>
-        <tr>
-            <th>Dedicación</th>
-            <th>&emsp;</th>
-            <td>Comprometido con los proyectos de principio a fin</td>
-        </tr>
-        <tr>
-            <th>Comunicación</th>
-            <th>&emsp;</th>
-            <td>Buena disposición a escuchar, atender y comprender las distintas problemáticas.</td>
-        </tr>
-    </table>
-</section>
+    <div class="estudios">
+        <div class="seccion-item">
+            <h4 class="seccion-descripcion">Responsabilidad</h4>
+            <p>Actitud comprometida con los clientes, compañeros y los proyectos a desarrollar.</p>
+        </div>
+        <div class="seccion-item">
+            <h4 class="seccion-descripcion">Dedicación</h4>
+            <p>Comprometido con los proyectos de principio a fin</p>
+        </div>
+        <div class="seccion-item">
+            <h4 class="seccion-descripcion">Comunicación</h4>
+            <p>Buena disposición a escuchar, atender y comprender las distintas problemáticas.</p>
+        </div>
+        <div class="seccion-item">
+            <h4 class="seccion-descripcion">Trabajo en equipo</h4>
+            <p>Capacidad de trabajar en equipo, asumiendo responsabilidades y colaborando con los demás para alcanzar los objetivos.</p>
+        </div>
+    </div>
     <br>
-    <footer>
-        <p class="ocultar-al-imprimir" style="text-align: center; position: relative; margin-bottom: 0px; width: 100%;">Made with love by <a href="#">Me</a> - 2024</p>
-    </footer>
+</section>
+
+<footer>
+    <p class="ocultar-al-imprimir" style="text-align: center; position: relative; margin-bottom: 0px; width: 100%;">Made with love by <a href="#">Me</a> - 2024</p>
+</footer>
 </body>
 </html>
