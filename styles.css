@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: cornsilk;
+}
+
+.title-header {
+    padding: 0 20px;
+    position: relative;
+    width: 100vw;
+    height: 130px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+}
+
+.img-content {
+    position: absolute;
+    left: 20px;
+}
+
+.title-content {
+    position: absolute;
+    width: 100vw;
+    padding: 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color:#4c4e58 ;
+}
+
+hr {
+    height: 3px;
+    background-color: #000;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+table tr th {
+    text-align: left;
+}
+
+table tr td {
+    text-align: left;
+}
+
+.sumario {
+    cursor: pointer; 
+    text-decoration: underline;
+}
+
+.link {
+    float: right;
+}
+
+.section {
+    line-height: 0; /* Esto es para que los subtitulos no tengan un espacio entre lineas */
+    margin-bottom: 15px;
+    
+}
+
+.center {position: relative;
+    width: 100vw;
+    margin: 0 auto;
+
+}
+
+.img-icon { /* Esto es para que las imagenes de los iconos tengan el mismo tamaño */
+    width: 4%;
+    height: 4%;
+    margin-right: 0px;
+    vertical-align: middle;
+}
+
+.special-font { /* Esto es para que el texto sea más grande y en negrita */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Cuando el dispositivo de salida sea una impresora */
+@media print {
+
+  /* Utilizar una regla parecida a ésta: */
+  .ocultar-al-imprimir {
+    display: none;
+  }
+
+  .title-header {
+    padding: 0 20px;
+    position: relative;
+    width: 100vw;
+    height: 130px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+}
+
+}
+
+.nav-header {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100vw;
+    height: 35px; /* Para centrar también verticalmente si el contenedor tiene altura */
+    background-color: #333;
+}
+
+.nav {
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+}
+
+.nav a:hover {
+    transition: 0.3s ease;
+    background-color: #555;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.nav li a {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 5px 25px 5px 25px; 
+    display: block;
+    transition: 0.4s ease;
+}
+.nav > li {
+    float: left;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    z-index: 1;
+}
+
+.nav li:hover > ul {
+    display: block;
+}
+
+.nav li ul li{
+    position: relative;
+}
+
+.nav li ul li ul{
+    top: 0px;
+    left: 140px;
+}
+
+.img-perfil {
+    border-style: double;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+@media (min-width: 412px) and (max-width: 700px){
+    .img-perfil {
+        display: none;
+    }
+
+    .nav-header {
+        width: 110vw;
+    }
+
+    h2, h3 {
+        margin-top: 10px;
+    }
+}
