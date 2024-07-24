@@ -4,32 +4,39 @@
 }
 
 body {
-    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: cornsilk;
-    margin: 0 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     max-width: 1500px;
 }
 
-.title-header {
-    padding: 0;
-    position: relative;
-    width: 100%;
-    height: 130px;
+.header-conteiner {
     display: flex;
-    align-items: center; /* Centra verticalmente */
+    flex-direction: row;
     justify-content: center;
 }
 
-.img-content {
-    position: absolute;
+.title-header {
     display: flex;
-    flex-direction: row;
-    left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
 }
 
-.img-content p {
-    margin-left: 10px;
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.title-section {
+    width: 80%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .img-perfil {
     width: 120px;
     height: 120px;
@@ -37,8 +44,8 @@ body {
 }
 
 .title-content {
-    padding: 20px 0;
-    text-align: center;
+    padding: 0px 0;
+    width: 60%;
 }
 
 a {
@@ -50,66 +57,71 @@ hr {
     height: 2px;
     background-color: #000;
 }
-
-.seccion {
-    display: flex;
-    flex-direction: column;
-}
-.seccion-item{
+.seccion-item {
     display: flex;
     flex-direction: row;
     justify-content: left;
 }
 
-.seccion-descripcion {
+.seccion-a {
     display: flex;
     flex-direction: row;
-    width: 15%;
-    margin-right: 0px;
+    width: 20%;
 }
 
-.descripcion-item{
+.seccion-b {
+    width: 80%;
+    margin-left: 20px;
+}
+
+.descripcion-item {
     margin-top: 10px;
 }
 
-.img-icon { /* Esto es para que las imagenes de los iconos tengan el mismo tamaño */
+.img-icon { 
     width: 2vw;
     height: 2vw;
     vertical-align: middle;
 }
 
-.special-font { /* Esto es para que el texto sea más grande y en negrita */
+.special-font { 
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-/* Cuando el dispositivo de salida sea una impresora */
+/* ------------------------------------------IMPRIMIR------------------------------------------ */
 @media print {
+    .mostrar-al-imprimir {
+        display: block !important;
+    }
 
-  /* Utilizar una regla parecida a ésta: */
-  .ocultar-al-imprimir {
+    .ocultar-al-imprimir {
+        display: none !important;
+    }
+
+    .nav-header {
+        height: 0px;    
+    }
+    .title-header {
+        width: 100%;
+    }
+    .title-section {
+        width: 100%;
+    }
+}
+
+/* Hide elements with 'mostrar-al-imprimir' class on screen */
+.mostrar-al-imprimir {
     display: none;
-  }
-
-  .title-header {
-    padding: 0 20px;
-    position: relative;
-    width: 100vw;
-    height: 130px;
-    display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center;
 }
 
-}
-
+/* ------------------------------------------NAV------------------------------------------ */
 .nav-header {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center; 
+    align-items: center;
     width: 100%;
     height: 35px;
-    margin-bottom: 20px; /* Para centrar también verticalmente si el contenedor tiene altura */
     background-color: #333;
 }
 
@@ -164,58 +176,38 @@ ul, ol {
 
 /* ------------------------------------------RESPONSIVE------------------------------------------ */
 @media (max-width: 450px){
-    body {
-        margin:  0 5px;
+    .title-header {
+        width: 95%;
+        font-size: 0.7rem;
     }
-    
-    .img-content {
-        display: none;
+
+    .img-icon { /* Esto es para que las imagenes de los iconos tengan el mismo tamaño */
+        width: 5vw;
+        height: 5vw;
     }
-    
-    .img-content p {
-        display: none;
+    .title-section {
+        width: 95%;
     }
-    .img-perfil {
-        display: none;
-    }
-    .seccion-item{
+    .seccion-item {
         display: flex;
         flex-direction: column;
         justify-content: left;
-        margin-bottom: 10px;
     }
-    
-    .seccion-descripcion {
-        display: flex;
-        flex-direction: row;
+    .seccion-a {
         width: 100%;
-        margin-right: 0px;
     }
-    
-    .descripcion-item{
-        margin-top: 10px;
-        
+    .seccion-b {
+        width: 100%;
+        margin: 0px 0 10px 0;
     }
-    
-    .img-icon { /* Esto es para que las imagenes de los iconos tengan el mismo tamaño */
-        width: 6vw;
-        height: 6vw;
-        vertical-align: bottom;
-    }
-    
     .special-font { /* Esto es para que el texto sea más grande y en negrita */
         font-size: 1.5rem;
         font-weight: bold;
     }
     
     .nav-header {
-        display: flex;
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
         width: 100%;
-        height: 35px;
-        margin-bottom: 20px; /* Para centrar también verticalmente si el contenedor tiene altura */
-        background-color: #333;
-        font-size: 3vw;
+        font-size: 0.75rem;
+        margin-bottom: 10px;
     } 
 }
