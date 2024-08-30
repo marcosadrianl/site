@@ -1,28 +1,73 @@
-window.onload = function() {
-    if (window.location.hash) {
-        const hash = window.location.hash; // obtiene el hash de la URL
-        const targetElement = document.querySelector(hash);
-        if (targetElement) {
-            targetElement.classList.add('highlight'); // añade la clase para resaltar
-        }
+let lightDarkCheck = 1;
+
+function darkMode() {
+    const Body = document.body;
+    const Iconos = document.getElementsByClassName("img-icon");
+    const Anchors = document.getElementsByTagName("a");
+    const darkModeChange = document.getElementById("darkMode");
+
+    Body.style.background = "#222";
+    Body.style.color = "#f0f0f0";
+
+    for (let i = 0; i < Iconos.length; i++) {
+        Iconos[i].style.filter = "invert(100%)";
     }
 
-    // Agregar event listeners para los enlaces
-    const links = document.querySelectorAll('.nav li a');
-    links.forEach(link => {
-        link.addEventListener('click', function(event) {
-            // Quitar el resaltado de todos los elementos resaltados
-            const highlightedElements = document.querySelectorAll('.highlight');
-            highlightedElements.forEach(el => {
-                el.classList.remove('highlight');
-            });
+    for (let i = 0; i < Anchors.length; i++) {
+        Anchors[i].style.color = "#f2f2f2";
+    }
 
-            // Obtener el hash del enlace clicado
-            const hash = this.getAttribute('href');
-            const targetElement = document.querySelector(hash);
-            if (targetElement) {
-                targetElement.classList.add('highlight'); // añadir clase de resaltado
-            }
-        });
-    });
+    darkModeChange.innerText = "Light Mode";
 }
+
+function lightMode() {
+    const Body = document.body;
+    const Iconos = document.getElementsByClassName("img-icon");
+    const Anchors = document.getElementsByTagName("a");
+    const darkModeChange = document.getElementById("darkMode");
+
+    Body.style.background = "";
+    Body.style.color = "";
+
+    for (let i = 0; i < Iconos.length; i++) {
+        Iconos[i].style.filter = "";
+    }
+
+    for (let i = 0; i < Anchors.length; i++) {
+        Anchors[i].style.color = "";
+    }
+
+    darkModeChange.innerText = "Dark Mode";
+}
+
+function selectMode() {
+    if (lightDarkCheck === 1) {
+        darkMode();
+        lightDarkCheck = 0;
+    } else {
+        lightMode();
+        lightDarkCheck = 1;
+    }
+
+    return lightDarkCheck;
+}
+
+function printCV(){
+    
+    if (lightDarkCheck === 1) {
+        window.print()
+    } else if (lightDarkCheck === 0){
+        lightMode();
+        setTimeout(() => {
+            lightMode();
+            window.print();
+        }, 500);
+        setTimeout(() => {
+            darkMode();            
+        }, 1000);
+    }
+}
+
+// Llama a selectMode() en un evento como un click para alternar el modo
+document.getElementById("darkMode").onclick = selectMode;
+document.getElementById("descargarCV").onclick = printCV;

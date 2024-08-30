@@ -2,7 +2,7 @@
 <html lang="es">
 <!--
 Mi CV en HTML
-version 1.4.12082024
+version 1.5.30082024
 Disenado por Marcos Lucas
 github: https://github.com/marcosadrianl
 Visita el repositorio en github para ver el codigo fuente 
@@ -35,13 +35,6 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
                         <a href="#" title="Inicio">Inicio</a>
                     </li>
                     <li>
-                        <a href="#" title="Servicios">Servicios</a>
-                        <ul>
-                            <li><a href="https://marcosadrianl.github.io/site/home.html" title="MARK! - Desarrollo Web" target="_blank">Desarrollo Web</a></li>
-                            <li><a href="#" onclick="window.print()" title="Descargar CV">Descargar CV</a></li>
-                        </ul>
-                    </li>
-                    <li>
                         <a href="#" title="Sobre mi">About me</a>
                         <ul>
                             <li><a href="#estudios" title="Mis Estudios">Mis Estudios</a></li>
@@ -57,6 +50,14 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
                             <li><a href="https://www.facebook.com/profile.php?id=100010639538519" target="_blank" title="Facebook">Facebook</a></li>
                             <li><a href="https://www.instagram.com/marcosadrianl/" target="_blank" title="Instagram">Instagram</a></li>
                             <li><a href="https://x.com/MarcosAdrianL" target="_blank" title="X">X</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="Servicios">Más opciones</a>
+                        <ul>
+                            <li><a href="https://marcosadrianl.github.io/site/home.html" title="MARK! - Desarrollo Web" target="_blank">Desarrollo Web</a></li>
+                            <li><a href="#" id="descargarCV" title="Descargar CV">Descargar CV</a></li>
+                            <li><a href="#" id="darkMode" title="Cambiar modo de visualizacion">Dark Mode</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -76,31 +77,23 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
                 <!--CONTACTO-->
                 <div class=" ">
                     <div class="mostrar-al-imprimir">
-                        <p><img src="https://img.icons8.com/?size=256&id=8808&format=png" class="img-icon" alt="LinkedIn Icon"> marcos-lucas-733832161</p>
-                        <p><img src="https://img.icons8.com/?size=256&id=106564&format=png" class="img-icon" alt="GitHub Icon"> marcosadrianl</p>
-                        <p><img src="assets/mail_24dp_000_FILL0_wght400_GRAD0_opsz24.png" class="img-icon" alt="Email Icon"> lucas.adrmarcos@gmail.com</p>
-                        <p><img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" class="img-icon" alt="Email Icon"> +54 9 221 495 8407</p>
+                        <p><img src="https://img.icons8.com/?size=256&id=8808&format=png" class="img-icon" alt="LinkedIn Icon" loading="lazy"> marcos-lucas-733832161</p>
+                        <p><img src="https://img.icons8.com/?size=256&id=106564&format=png" class="img-icon" alt="GitHub Icon" loading="lazy"> marcosadrianl</p>
+                        <p><img src="assets/mail_24dp_000_FILL0_wght400_GRAD0_opsz24.png" class="img-icon" alt="Email Icon" loading="lazy"> lucas.adrmarcos@gmail.com</p>
+                        <p><img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" class="img-icon" alt="Email Icon" loading="lazy"> +54 9 221 495 8407</p>
                     </div>
 
                     <div class="ocultar-al-imprimir special-font">
-                        <a href="https://www.linkedin.com/in/marcos-lucas-733832161/" target="_blank">
-                            <img src="https://img.icons8.com/?size=256&id=8808&format=png" class="img-icon" alt="LinkedIn Icon">
-                        </a> |
-                        <a href="https://github.com/marcosadrianl" target="_blank">
-                            <img src="https://img.icons8.com/?size=256&id=106564&format=png" class="img-icon" alt="GitHub Icon">
-                        </a> | 
-                        <a href="mailto:lucas.adrmarcos@gmail.com" target="_blank">
-                            <img src="assets/mail_24dp_000_FILL0_wght400_GRAD0_opsz24.png" class="img-icon" alt="Mail Icon">
-                        </a> | 
-                        <a href="https://wa.me/5492214958407" target="_blank">
-                            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" class="img-icon" alt="Whatsapp Icon">
-                        </a>
+                        <a href="https://www.linkedin.com/in/marcos-lucas-733832161/" target="_blank"><img src="https://img.icons8.com/?size=256&id=8808&format=png" class="img-icon" alt="LinkedIn Icon" loading="lazy"></a>
+                        <a href="https://github.com/marcosadrianl" target="_blank"><img src="https://img.icons8.com/?size=256&id=106564&format=png" class="img-icon" alt="GitHub Icon" loading="lazy"></a>
+                        <a href="mailto:lucas.adrmarcos@gmail.com" target="_blank"><img src="assets/mail_24dp_000_FILL0_wght400_GRAD0_opsz24.png" class="img-icon" alt="Mail Icon" loading="lazy"></a>
+                        <a href="https://wa.me/5492214958407" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" class="img-icon" alt="Whatsapp Icon" loading="lazy"></a>
                     </div>
                 </div>
             </div>
             <!--IMAGEN DE PERFIL-->
             <div  class="img-content">
-                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGc5xGFZlkU_w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722868945517?e=1729123200&v=beta&t=hcP5PW3XN4_bLA1omReKVhqlBx8QWErXxXZ69g1LP_Q" alt="Mi imagen de perfil" class="img-perfil">
+                <img src="profile-picture.png" alt="Mi imagen de perfil" class="img-perfil" loading="lazy">
             </div>
     
            
@@ -129,7 +122,7 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
                 </div>
                 <div class="seccion-item">
                     <h4 class="seccion-a">2012</h4>
-                    <p class="seccion-b">Egresado en Escuela <a href="https://uanormal1-bue.infd.edu.ar/sitio/" target="_blank"><b>Educación Media N°32</b></a>: Bachiller en Ciencias Sociales</p>
+                    <p class="seccion-b">Egresado en Escuela <a href="https://uanormal1-bue.infd.edu.ar/sitio/" target="_blank" ><b>Educación Media N°32</b></a>: Bachiller en Ciencias Sociales</p>
                 </div>
             </div>
         </div>
@@ -144,11 +137,11 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
                 <div>
                     <div class="seccion-item">
                         <h4 class="seccion-a">Programación</h4>
-                        <p class="seccion-b">Conocimiento de lenguajes de programación como Lenguaje C, Java, JavaScript, y Python.</p>
+                        <p class="seccion-b">Conocimiento de lenguajes de programación como Lenguaje C, Java, JavaScript.</p>
                     </div>
                     <div class="seccion-item">
                         <h4 class="seccion-a">Desarrollo web</h4>
-                        <p class="seccion-b">Conocimiento de herramientas como HTML, CSS, JavaScript, y Python.</p>
+                        <p class="seccion-b">Conocimiento de herramientas como HTML, CSS, JavaScript.</p>
                     </div>
                     <div class="seccion-item">
                         <h4 class="seccion-a">CMS</h4>
@@ -156,7 +149,7 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
                     </div>
                     <div class="seccion-item">
                         <h4 class="seccion-a">Frameworks</h4>
-                        <p class="seccion-b">Conocimiento de frameworks como TailwindCSS, ReactJS, Node.js.</p>
+                        <p class="seccion-b">Conocimiento de frameworks como TailwindCSS.</p>
                     </div>
                     <div class="seccion-item">
                         <h4 class="seccion-a">Idiomas</h4>
@@ -175,20 +168,16 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
                 <h2>Experiencia Laboral</h2>
                 <hr>
                 <div class="descripcion-item">
-                    <h4>Colaborador en I.E.C. UTN La Plata <span style="color: green;">&bull;</span></h4>
+                    <h4>Colaborador en I.E.C. UTN La Plata <span style="color: green; font-size: large;">&bull;</span></h4>
                     <p>Participo como colaborador en el desarrollo y entrega de software para el departamento de Física en la Universidad Tecnológica Nacional La Plata.</p>
                 </div>
                 <div class="descripcion-item">
-                    <h4>Profesor Particular en Matemáticas y Física <span style="color: green;">&bull;</span></h4>
+                    <h4>Profesor Particular en Matemáticas y Física <span style="color: orange;font-size: large;">&bull;</span></h4>
                     <p>Doy clases particulares de apoyo escolar y universitario en las áreas de matemáticas y física.</p>
                 </div>
                 <div class="descripcion-item">
-                    <h4>Electricista en Comercios</h4>
+                    <h4>Electricista <span style="color: red;font-size: large;">&bull;</span></h4>
                     <p>Canalización e instalación de circuitos eléctricos de baja tensión en hogares, templos y pequeños comercios.</p>
-                </div>
-                <div class="descripcion-item">
-                    <h4>Asesor Inmobiliario en Century21 Argentina</h4>
-                    <p>Asesor inmobiliario en Century21 Espínola.</p>
                 </div>
                 
             </div>
@@ -203,7 +192,7 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
                 <hr>
                 <div class="descripcion-item">
                     <h4>Desarrollo y mantenimiento de sitios web</h4>
-                    <p>Continuo actualizando y mejorando mis proyectos personales y de clientes empleando todo lo aprendido en HTML, CSS, JavaScript, ReactJS, Node.js, TailwindCSS, WordPress y Google Sites. Cada proyecto se beneficia de mi continuo aprendizaje y actualización de las tecnologías.</p>
+                    <p>Continuo actualizando y mejorando mis proyectos personales y de clientes empleando todo lo aprendido en HTML, CSS, JavaScript, TailwindCSS, WordPress y Google Sites. Cada proyecto se beneficia de mi continuo aprendizaje y actualización de las tecnologías.</p>
                     <p>Visita algunos de mis proyectos:</p>
                     <ul>
                         <li><b>- <a href="" >Marcos Lucas OnlineCV</a></b> (este sitio)</li>
@@ -217,19 +206,19 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
                 </div>
                 <div class="descripcion-item">
                     <h4>Laboratorio I.E.C.: Laboratorios Remotos</h4>
-                    <p>Participo en el desarrollo de programas mediante Arduino y Python para laboratorios de ensayos ópticos (Ley de Snell) y de gases (Ley de Boyle), que se pueden ejecutar en tiempo real de manera remota gracias a la integración del Grupo <b><a href="https://codapli.frlp.utn.edu.ar/" target="_blank">CODAPLI</a></b>. Este software se ejecutará por alumnos de la UTN regional La Plata.</p>
+                    <p>Participo en el desarrollo de programas mediante Arduino y Python para laboratorios de ensayos ópticos (Ley de Snell) y de gases (Ley de Gas Ideal), que se pueden ejecutar en tiempo real de manera remota gracias a la integración del Grupo <b><a href="https://codapli.frlp.utn.edu.ar/" target="_blank">CODAPLI</a></b>. Este software se ejecutará por alumnos de la UTN regional La Plata.</p>
                 </div>
                 <div class="descripcion-item">
                     <h4>Desarrollo de software controlador para adquisidor de datos</h4>
                     <p>Junto con el equipo del área de Ingeniería en Sistemas, participo en el desarrollo del software para el adquisidor de datos del laboratorio, utilizando lenguaje Python, Arduino y experimentando con SmallTalk. Este software permite al usuario visualizar los datos del adquisidor en tiempo real, sensar valores de tensiones y corrientes generando gráficas de las mismas.</p>
                 </div>
                 <div class="descripcion-item">
-                    <h4>Diseño, desarrollo y creación de Circuitos PCB</h4>
-                    <p>En el laboratorio de electrónica de la Facultad de Ingeniería de la UNLP, desarrollé circuitos electrónicos diversos empleando software de diseño como EasyEDA y EAGLE para el diseño, especificación y creación de circuitos. Luego, mediante distintos métodos, llevé adelante la creación y puesta en prueba de filtros activos de segundo orden para audio, fuentes de energía con bajo nivel de ruido (low ripple), adaptadores de impedancia activos para audio y circuitos amplificadores de sonido. Estos proyectos los utilicé al servicio de mi iglesia local resolviendo problemas de conexión y calidad de sonido.</p>
-                </div>
-                <div class="descripcion-item">
                     <h4>Profesor particular en matemáticas y física</h4>
                     <p>Desde 2017 hasta la actualidad, llevo adelante el dictado de clases para alumnos de primaria hasta universitarios que requieren apoyo especial en estas áreas. En esta etapa, pude desarrollar habilidades de comunicación y enseñanza, compartir conocimientos y ayudar a los demás en algo que me apasiona.</p>
+                </div>
+                <div class="descripcion-item">
+                    <h4>Diseño, desarrollo y creación de Circuitos PCB</h4>
+                    <p>En el laboratorio de electrónica de la Facultad de Ingeniería de la UNLP, desarrollé circuitos electrónicos diversos empleando software de diseño como EasyEDA y EAGLE para el diseño, especificación y creación de circuitos. Luego, mediante distintos métodos, llevé adelante la creación y puesta en prueba de filtros activos de segundo orden para audio, fuentes de energía con bajo nivel de ruido (low ripple), adaptadores de impedancia activos para audio y circuitos amplificadores de sonido. Estos proyectos los utilicé al servicio de mi iglesia local resolviendo problemas de conexión y calidad de sonido.</p>
                 </div>
             </div>
     </div>
@@ -266,8 +255,9 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
 
 <footer>
     <div class="footer-container">
-        <p class="ocultar-al-imprimir">Made with love by <a href="#">Me</a> - 2024</p>
+        <p class="ocultar-al-imprimir">Marcos Lucas - 2024</p>
     </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>

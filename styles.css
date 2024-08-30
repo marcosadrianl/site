@@ -176,6 +176,11 @@ ul, ol {
 
 /* ------------------------------------------RESPONSIVE------------------------------------------ */
 @media (max-width: 450px){
+
+    a {
+        text-decoration: underline;
+    }
+
     .title-header {
         width: 95%;
         font-size: 0.7rem;
