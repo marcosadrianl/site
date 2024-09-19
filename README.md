@@ -15,5 +15,8 @@ So, the idea is not original for me, but i am aplying everything i learn here. e
 Feel free to copy the repo, ask me any question or just say hi! (if you notice any issue, or copyright violation, please message me)
 
 UPDATES
+19/09/2024 - React for static webs?? - the CVgenerator page horror
+Oh no! Learning from earth to sky, made me says things so dumb! so, here is something new: an app that allows you to create a simple CV, a boring one... but a dinamic page, the joke? made with pure JS, no React sadly. But thats my next step, had a lot of headache making that page, and loving the fact that react can make it much easyer. Am currently working on a solution to import a previus document to keep editing it. No solution were made by now.
+
 30/08/2024 - DarkMode
 Finally, knowing how to use JS, now i have a pretty basic Dark/Light mode. Still some issues when trying to print the cv in dark mode, so there is a dumb solution aplied.
