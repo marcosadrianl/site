@@ -1,4 +1,3 @@
-HEAD
 # site
 online cv proyect
 go to [Pagina de inicio ](https://marcosadrianl.github.io/site)
