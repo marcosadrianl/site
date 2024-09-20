@@ -1,73 +1,88 @@
-let lightDarkCheck = 1;
+const wordCarrusel = document.getElementById("word-carrusel");
+const services = document.getElementById("services-link");
+const howWeWork = document.getElementById("how-we-work-link");
+const benefits = document.getElementById("benefits-link");
+const contact = document.getElementById("contact-link");
+const blurNav = document.getElementById("blur");
+const logo = document.getElementById("logo");
+const flag = 1; //para ver si el efecto zoom ya se ejecuto en responsive
 
-function darkMode() {
-    const Body = document.body;
-    const Iconos = document.getElementsByClassName("img-icon");
-    const Anchors = document.getElementsByTagName("a");
-    const darkModeChange = document.getElementById("darkMode");
+const words = ["estilo", "presentacion", "calidad", "eficiencia", "poder", "presencia", "personalidad", "identidad"];
+const logoUrl = ["src/logo/sf-alien-encounters.regular.webp", "src/logo/gorock-brush.regular.webp", "src/logo/kastyle.regular.webp", "src/logo/labelshort.stamp.webp", "src/logo/sf-alien-encounters.regular.webp", "src/logo/space-break.regular.webp", "src/logo/stome-birth-demo.regular.webp"]
 
-    Body.style.background = "#222";
-    Body.style.color = "#f0f0f0";
+let wordIndex = 0;
 
-    for (let i = 0; i < Iconos.length; i++) {
-        Iconos[i].style.filter = "invert(100%)";
-    }
-
-    for (let i = 0; i < Anchors.length; i++) {
-        Anchors[i].style.color = "#f2f2f2";
-    }
-
-    darkModeChange.innerText = "Light Mode";
+function changeWord() {
+    wordCarrusel.textContent = words[wordIndex];
+    wordIndex = (wordIndex + 1) % words.length; // Loop through the words
 }
 
-function lightMode() {
-    const Body = document.body;
-    const Iconos = document.getElementsByClassName("img-icon");
-    const Anchors = document.getElementsByTagName("a");
-    const darkModeChange = document.getElementById("darkMode");
+function fadeInOut() {
+    // Start fade out using Tailwind's opacity and transition classes
+    wordCarrusel.classList.add("opacity-0", "transition-opacity", "duration-1000");
 
-    Body.style.background = "";
-    Body.style.color = "";
+    setTimeout(() => {
+        // Change the word when it's fully faded out
+        changeWord();
 
-    for (let i = 0; i < Iconos.length; i++) {
-        Iconos[i].style.filter = "";
-    }
+        // Start fade in by removing opacity-0 and adding opacity-100
+        wordCarrusel.classList.remove("opacity-0");
+        wordCarrusel.classList.add("opacity-100");
 
-    for (let i = 0; i < Anchors.length; i++) {
-        Anchors[i].style.color = "";
-    }
-
-    darkModeChange.innerText = "Dark Mode";
+        // Remove the fade-in class after it's done to allow repeated transitions
+        setTimeout(() => {
+            wordCarrusel.classList.remove("opacity-100");
+        }, 1000); // Wait for the fade-in to finish before removing the class
+    }, 1000); // Time matching the fade-out duration
 }
 
-function selectMode() {
-    if (lightDarkCheck === 1) {
-        darkMode();
-        lightDarkCheck = 0;
-    } else {
-        lightMode();
-        lightDarkCheck = 1;
-    }
+// Set interval to repeat the fade-in/out process
+setInterval(() => {
+    fadeInOut();
+}, 2500); // Adjust interval to account for fade in and out time
 
-    return lightDarkCheck;
-}
-
-function printCV(){
+window.addEventListener('scroll', function() {
+    const parallax = document.getElementById("parallax");
+    let scrollPosition = window.scrollY;
+    console.log(scrollPosition);
+    console.log(document.body.scrollHeight);
+    console.log(window.innerHeight);
     
-    if (lightDarkCheck === 1) {
-        window.print()
-    } else if (lightDarkCheck === 0){
-        lightMode();
-        setTimeout(() => {
-            lightMode();
-            window.print();
-        }, 500);
-        setTimeout(() => {
-            darkMode();            
-        }, 1000);
+    
+    // Cambia la propiedad 'top' en función de la posición de scroll
+    if (window.innerWidth > 768) {
+        parallax.style.transform = "scale(1)";
+        parallax.style.right = 0;
+        parallax.style.top = `${scrollPosition * (- (parallax.height + window.innerHeight)/(scrollPosition + document.body.scrollHeight + window.innerHeight + parallax.height))}px`;
+        parallax.style.filter = `blur(${scrollPosition * 0.001}px)`;
+    } else {
+        if (flag === 1){
+            parallax.style.transition = "transform 1s ease-in-out";
+            parallax.style.transform = "scale(3.2)";
+            parallax.style.right = `${scrollPosition * (- parallax.height/(scrollPosition + document.body.scrollHeight + window.innerHeight + parallax.height))}px`;
+        }
+        flag = 0;
     }
+
+    
+});
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 50) {
+        blurNav.style.filter = "opacity(0.5)";
+        blurNav.style.background = "black";
+        logo.style.filter = "invert(1)";
+    } else {
+        blurNav.style.filter = "opacity(0)";
+        blurNav.style.background = "transparent";
+        logo.style.filter = "invert(0)";
+    }
+});
+
+function changeLogo() {
+    let randomIndex = Math.floor(Math.random() * logoUrl.length);
+    
+    logo.src = logoUrl[randomIndex];
 }
 
-// Llama a selectMode() en un evento como un click para alternar el modo
-document.getElementById("darkMode").onclick = selectMode;
-document.getElementById("descargarCV").onclick = printCV;
+changeLogo();
