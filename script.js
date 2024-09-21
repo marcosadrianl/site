@@ -56,7 +56,7 @@ window.addEventListener('scroll', function() {
     } else {
         if (flag === 1){
             parallax.style.transition = "transform 1s ease-in-out";
-            parallax.style.transform = "scale(3)";
+            parallax.style.transform = "scale(4)";
             parallax.style.top = `${scrollPosition * (- parallax.height/(scrollPosition + document.body.scrollHeight + window.innerHeight + parallax.height))}px`;
         }
         flag = 0;
