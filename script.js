@@ -5,6 +5,7 @@ const benefits = document.getElementById("benefits-link");
 const contact = document.getElementById("contact-link");
 const blurNav = document.getElementById("blur");
 const logo = document.getElementById("logo");
+const socialMedia = document.getElementById("social-media");
 const flag = 1; //para ver si el efecto zoom ya se ejecuto en responsive
 
 const words = ["estilo", "presentacion", "calidad", "eficiencia", "poder", "presencia", "personalidad", "identidad"];
@@ -44,22 +45,19 @@ setInterval(() => {
 window.addEventListener('scroll', function() {
     const parallax = document.getElementById("parallax");
     let scrollPosition = window.scrollY;
-    console.log(scrollPosition);
-    console.log(document.body.scrollHeight);
-    console.log(window.innerHeight);
-    
+
     
     // Cambia la propiedad 'top' en función de la posición de scroll
     if (window.innerWidth > 768) {
         parallax.style.transform = "scale(1)";
         parallax.style.right = 0;
-        parallax.style.top = `${scrollPosition * (- (parallax.height + window.innerHeight)/(scrollPosition + document.body.scrollHeight + window.innerHeight + parallax.height))}px`;
+        parallax.style.top = `${- scrollPosition * (parallax.height/(document.body.scrollHeight + 2*scrollPosition))}px`;
         parallax.style.filter = `blur(${scrollPosition * 0.001}px)`;
     } else {
         if (flag === 1){
             parallax.style.transition = "transform 1s ease-in-out";
-            parallax.style.transform = "scale(3.2)";
-            parallax.style.right = `${scrollPosition * (- parallax.height/(scrollPosition + document.body.scrollHeight + window.innerHeight + parallax.height))}px`;
+            parallax.style.transform = "scale(3)";
+            parallax.style.top = `${scrollPosition * (- parallax.height/(scrollPosition + document.body.scrollHeight + window.innerHeight + parallax.height))}px`;
         }
         flag = 0;
     }
@@ -69,13 +67,15 @@ window.addEventListener('scroll', function() {
 
 window.addEventListener("scroll", function() {
     if (window.scrollY > 50) {
-        blurNav.style.filter = "opacity(0.5)";
+        blurNav.style.filter = "opacity(0.85)";
         blurNav.style.background = "black";
         logo.style.filter = "invert(1)";
+        socialMedia.style.filter = "invert(1)";
     } else {
         blurNav.style.filter = "opacity(0)";
         blurNav.style.background = "transparent";
         logo.style.filter = "invert(0)";
+        socialMedia.style.filter = "invert(0)";
     }
 });
 
