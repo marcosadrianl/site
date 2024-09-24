@@ -1,17 +1,14 @@
 const wordCarrusel = document.getElementById("word-carrusel");
-const services = document.getElementById("services-link");
-const howWeWork = document.getElementById("how-we-work-link");
-const benefits = document.getElementById("benefits-link");
-const contact = document.getElementById("contact-link");
+//const services = document.getElementById("services-link");
+//const howWeWork = document.getElementById("how-we-work-link");
+//const benefits = document.getElementById("benefits-link");
+//const contact = document.getElementById("contact-link");
 const blurNav = document.getElementById("blur");
 const logo = document.getElementById("logo");
 const socialMedia = document.getElementById("social-media");
-const flag = 1; //para ver si el efecto zoom ya se ejecuto en responsive
-
-const words = ["estilo", "presentacion", "calidad", "eficiencia", "poder", "presencia", "personalidad", "identidad"];
-const logoUrl = ["src/logo/sf-alien-encounters.regular.webp", "src/logo/gorock-brush.regular.webp", "src/logo/kastyle.regular.webp", "src/logo/labelshort.stamp.webp", "src/logo/sf-alien-encounters.regular.webp", "src/logo/space-break.regular.webp", "src/logo/stome-birth-demo.regular.webp"]
-
+const navBarLinksContainer = document.getElementById("navBarLinks");
 let wordIndex = 0;
+const words = ["estilo", "presentacion", "calidad", "eficiencia", "poder", "presencia", "personalidad", "identidad"];
 
 function changeWord() {
     wordCarrusel.textContent = words[wordIndex];
@@ -45,24 +42,16 @@ setInterval(() => {
 window.addEventListener('scroll', function() {
     const parallax = document.getElementById("parallax");
     let scrollPosition = window.scrollY;
-
-    
     // Cambia la propiedad 'top' en función de la posición de scroll
     if (window.innerWidth > 768) {
         parallax.style.transform = "scale(1)";
-        parallax.style.right = 0;
-        parallax.style.top = `${- scrollPosition * (parallax.height/(document.body.scrollHeight + 2*scrollPosition))}px`;
+        parallax.style.top = `${- scrollPosition * 0.1}px`;
         parallax.style.filter = `blur(${scrollPosition * 0.001}px)`;
     } else {
-        if (flag === 1){
-            parallax.style.transition = "transform 1s ease-in-out";
-            parallax.style.transform = "scale(4)";
-            parallax.style.top = `${scrollPosition * (- parallax.height/(scrollPosition + document.body.scrollHeight + window.innerHeight + parallax.height))}px`;
-        }
-        flag = 0;
+        parallax.style.transition = "transform 5s ease-in-out";
+        parallax.style.transform = "scale(1.5)";
+        parallax.style.top = `${ - scrollPosition * 0.05}px`;
     }
-
-    
 });
 
 window.addEventListener("scroll", function() {
@@ -79,10 +68,3 @@ window.addEventListener("scroll", function() {
     }
 });
 
-function changeLogo() {
-    let randomIndex = Math.floor(Math.random() * logoUrl.length);
-    
-    logo.src = logoUrl[randomIndex];
-}
-
-changeLogo();
