@@ -8,7 +8,7 @@ const logo = document.getElementById("logo");
 const socialMedia = document.getElementById("social-media");
 const navBarLinksContainer = document.getElementById("navBarLinks");
 let wordIndex = 0;
-const words = ["estilo", "presentacion", "calidad", "eficiencia", "poder", "presencia", "personalidad", "identidad"];
+const words = ["estilo", "presentacion", "calidad", "eficiencia", "poder", "presencia", "personalidad", "identidad", "versatilidad"];
 
 function changeWord() {
     wordCarrusel.textContent = words[wordIndex];
@@ -39,21 +39,6 @@ setInterval(() => {
     fadeInOut();
 }, 2500); // Adjust interval to account for fade in and out time
 
-window.addEventListener('scroll', function() {
-    const parallax = document.getElementById("parallax");
-    let scrollPosition = window.scrollY;
-    // Cambia la propiedad 'top' en función de la posición de scroll
-    if (window.innerWidth > 768) {
-        parallax.style.transform = "scale(1)";
-        parallax.style.top = `${- scrollPosition * 0.1}px`;
-        parallax.style.filter = `blur(${scrollPosition * 0.001}px)`;
-    } else {
-        parallax.style.transition = "transform 5s ease-in-out";
-        parallax.style.transform = "scale(1.5)";
-        parallax.style.top = `${ - scrollPosition * 0.05}px`;
-    }
-});
-
 window.addEventListener("scroll", function() {
     if (window.scrollY > 50) {
         blurNav.style.filter = "opacity(0.85)";
@@ -68,3 +53,28 @@ window.addEventListener("scroll", function() {
     }
 });
 
+const boxes = document.querySelectorAll('.box');
+let angle = 0;
+let animationFrame;
+
+function animateGradient(boxSelected) {
+  angle += 0.003; // Incrementa el ángulo gradualmente
+  if (angle >= 1) angle = 0; // Resetea el ángulo al completar un giro
+  boxSelected.style.setProperty('--border-angle', `${angle}turn`);
+  animationFrame = requestAnimationFrame(() => animateGradient(boxSelected));
+}
+
+function startAnimation(e) {
+  //angle = 0; // Resetea el ángulo al iniciar la animación
+  animateGradient(e.currentTarget); // Pasa el `div` que se está animando
+}
+
+function stopAnimation() {
+  cancelAnimationFrame(animationFrame); // Detiene la animación cuando se quita el hover
+}
+
+// Agrega event listeners para hover
+boxes.forEach(box => {
+  box.addEventListener('mouseenter', startAnimation);
+  box.addEventListener('mouseleave', stopAnimation);
+});

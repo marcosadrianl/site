@@ -1,9 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700&display=block');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .bg-custom-gradient-1 {
+      background: rgb(14,36,71);
+      background: linear-gradient(0deg, rgba(14,36,71,1) 8%, rgba(38,36,80,1) 50%);
+    }
+    .bg-custom-gradient-2 {
+        background: rgb(86,123,182);
+        background: linear-gradient(0deg, rgba(86,123,182,1) 0%, rgba(229,229,229,1) 100%);
+      }
+  }
+
 html {
     scroll-behavior: smooth;
  }
+
+ .box {
+
+  display: grid;
+  color: white;
+  text-shadow: 0 1px 0 #000;
+  
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 5%,
+      #112 60%,
+      #213 95%
+    );
+  
+  border: solid 5px transparent;
+  border-radius: 1em;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+  
+  background: 
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box, 
+    var(--main-bg) border-box;
+  
+  background-position: center center;
+}
+
+.box:hover {
+  animation-play-state: paused;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento */
+}
