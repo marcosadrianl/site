@@ -12,20 +12,15 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcos Lucas Online CV</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-new.css" />
     <link rel="icon" type="image/png" sizes="16x16"  href="favicon-16x16.png">
     <script>
-        const messaje = ["Mi CV en HTML",
-        "version 1.4.23072024",
-        "Disenado por Marcos Lucas",
-        "github: https://github.com/marcosadrianl",
-        "Visita el repositorio en github para ver el codigo fuente",
-        "Puedes usar este documento de manera libre, solo no olvides saludarme!"]   
+        const messaje = "Mi CV en HTML, version 1.4.23072024, Disenado por Marcos Lucas, github: https://github.com/marcosadrianl, Visita el repositorio en github para ver el codigo fuente, Puedes usar este documento de manera libre, solo no olvides saludarme!";
         console.log(messaje)
     </script>
 </head>
 
-<body>
+<body class="max-w-[1500px]">
     <header>
         <div class="nav-header contenedor-nav ocultar-al-imprimir">
             <!--MENU-->
@@ -52,213 +47,211 @@ Puedes usar este documento de manera libre, solo no olvides saludarme!
                             <li><a href="https://x.com/MarcosAdrianL" target="_blank" title="X">X</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#" title="Servicios">Más opciones</a>
-                        <ul>
-                            <li><a href="https://marcosadrianl.github.io/site/landing.html" title="MARK! - Desarrollo Web" target="_blank">Desarrollo Web</a></li>
-                            <li><a href="#" id="descargarCV" title="Descargar CV">Descargar CV</a></li>
-                            <li><a href="#" id="darkMode" title="Cambiar modo de visualizacion">Dark Mode</a></li>
-                        </ul>
-                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 <main>
-    <div class="header-conteiner">
-        <div class="title-header">
+    <div class="flex flex-row">
+        <div class="flex items-start md:items-center justify-between mx-auto w-[90%] md:w-[80%]">
              <!--NOMBRE Y REDES SOCIALES-->
-            <div class="title-content">
-                <div>
-                    <h1>Marcos Adrian Lucas</h1>
-                    <p class="title-content-b">Estudiante de 2do año de Ingeniería de Sistemas en la UTN, actualmente enfocado en el desarrollo front-end.</p>
-                    <p>La Plata, Buenos Aires, Argentina</p>
+            <div class="">
+                <div class="flex flex-col justify-between gap-1">
+                    <h1 class="text-2xl md:text-4xl">Marcos Adrian Lucas</h1>
+                    <p class="text-sm md:text-base">Estudiante de 2do año de Ingeniería de Sistemas en la UTN, actualmente enfocado en el desarrollo de <a href="https://barbify.up.railway.app" target="_blank">Barbify</a>.</p>
+                    <p class="text-sm md:text-base">La Plata, Buenos Aires, Argentina</p>
                 </div>
                 <!--CONTACTO-->
                 <div class=" ">
-                    <div class="mostrar-al-imprimir">
-                        <p><img src="https://img.icons8.com/?size=256&id=8808&format=png" class="img-icon" alt="LinkedIn Icon" loading="lazy"> marcosadrianl</p>
-                        <p><img src="https://img.icons8.com/?size=256&id=106564&format=png" class="img-icon" alt="GitHub Icon" loading="lazy"> marcosadrianl</p>
-                        <p><img src="assets/mail_24dp_000_FILL0_wght400_GRAD0_opsz24.png" class="img-icon" alt="Email Icon" loading="lazy"> lucas.adrmarcos@gmail.com</p>
-                        <p><img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" class="img-icon" alt="Email Icon" loading="lazy"> +54 9 221 495 8407</p>
+                    <div class="flex flex-col gap-2 mostrar-al-imprimir">
+                        <div class="flex flex-row gap-1"><img src="https://img.icons8.com/?size=256&id=8808&format=png" class="w-2 h-2 md:w-4 md:h-4 align-middle" alt="LinkedIn Icon" title="" loading="lazy"> marcosadrianl</div>
+                        <div class="flex flex-row gap-1"><img src="https://img.icons8.com/?size=256&id=106564&format=png" class="w-2 h-2 md:w-4 md:h-4 align-middle" alt="GitHub Icon" loading="lazy"> marcosadrianl</div>
+                        <div class="flex flex-row gap-1"><img src="assets/mail_24dp_000_FILL0_wght400_GRAD0_opsz24.png" class="w-2 h-2 md:w-4 md:h-4 align-middle" alt="Email Icon" loading="lazy"> lucas.adrmarcos@gmail.com</div>
+                        <div class="flex flex-row gap-1"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" class="w-2 h-2 md:w-4 md:h-4 align-middle" alt="Email Icon" loading="lazy"> +54 9 221 495 8407</div>
                     </div>
 
-                    <div class="ocultar-al-imprimir special-font">
-                        <a href="https://www.linkedin.com/in/marcosadrianl/" target="_blank"><img src="https://img.icons8.com/?size=256&id=8808&format=png" class="img-icon" alt="LinkedIn Icon" loading="lazy"></a>
-                        <a href="https://github.com/marcosadrianl" target="_blank"><img src="https://img.icons8.com/?size=256&id=106564&format=png" class="img-icon" alt="GitHub Icon" loading="lazy"></a>
-                        <a href="mailto:lucas.adrmarcos@gmail.com" target="_blank"><img src="assets/mail_24dp_000_FILL0_wght400_GRAD0_opsz24.png" class="img-icon" alt="Mail Icon" loading="lazy"></a>
-                        <a href="https://wa.me/5492214958407" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png" class="img-icon" alt="Whatsapp Icon" loading="lazy"></a>
+                    <div class="flex flex-row gap-4 ocultar-al-imprimir">
+                        <a href="https://www.linkedin.com/in/marcosadrianl/" target="_blank"><img src="https://img.icons8.com/?size=256&id=8808&format=png"  class="w-4 h-4 md:w-8 md:h-8 align-middle" alt="LinkedIn Icon" loading="lazy"></a>
+                        <a href="https://github.com/marcosadrianl" target="_blank"><img src="https://img.icons8.com/?size=256&id=106564&format=png"  class="w-4 h-4 md:w-8 md:h-8 align-middle" alt="GitHub Icon" loading="lazy"></a>
+                        <a href="mailto:lucas.adrmarcos@gmail.com" target="_blank"><img src="assets/mail_24dp_000_FILL0_wght400_GRAD0_opsz24.png"  class="w-4 h-4 md:w-8 md:h-8 align-middle" alt="Mail Icon" loading="lazy"></a>
+                        <a href="https://wa.me/5492214958407" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384023.png"  class="w-4 h-4 md:w-8 md:h-8 align-middle" alt="Whatsapp Icon" loading="lazy"></a>
                     </div>
                 </div>
             </div>
             <!--IMAGEN DE PERFIL-->
-            <div  class="img-content">
-                <img src="profile-picture.png" alt="Mi imagen de perfil" class="img-perfil" loading="lazy">
+            <div  class="w-52 md:w-40 mt-2 md:mt-4">
+                <img src="profile-picture.png" alt="Mi imagen de perfil" class="rounded-md" loading="lazy">
             </div>
-    
-           
         </div>
     </div>
 </main>
-<section>
-    <div class="section-container">
-        <div class="title-section" id="estudios">
+<section class="flex flex-col items-center w-full">
+    <div class="w-[90%] md:w-[80%]">
+        <div class="" id="estudios">
             <!--ESTUDIOS-->
-            <br>
-            <h2 >Estudios</h2>
-            <hr>
-            <div class="estudios">
-                <div class="seccion-item">
-                    <h4 class="seccion-a">2024 - Actualidad</h4>
-                    <p class="seccion-b">Curso de programación web en <a href="https://umupla.wordpress.com/"><b>U.MU.PLA CFP 413</b></a> - La PLata</p>
-                </div>
-                <div class="seccion-item">
-                    <h4 class="seccion-a">2023 - Actualidad</h4>
-                    <p class="seccion-b">Estudiante de 2do año de Ingeniería de sistemas en la <a href="https://www.frlp.utn.edu.ar/" target="_blank"><b>UTN FRLP</b></a></p>
-                </div>
-                <div class="seccion-item">
-                    <h4 class="seccion-a">2012 - 2023</h4>
-                    <p class="seccion-b">Estudiante de 4to año de Ingeniería electromecánica en <a href="https://ing.unlp.edu.ar/" target="_blank"><b>FI - UNLP</b></a></p>
-                </div>
-                <div class="seccion-item">
-                    <h4 class="seccion-a">2012</h4>
-                    <p class="seccion-b">Egresado en Escuela <a href="https://uanormal1-bue.infd.edu.ar/sitio/" target="_blank" ><b>Educación Media N°32</b></a>: Bachiller en Ciencias Sociales</p>
-                </div>
+            <h2 class="text-xl md:text-2xl">Estudios</h2>
+            <table class="table-auto border-collapse border border-gray-300  w-full text-left">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="border border-gray-300 px-2 py-1 text-sm md:text-base md:px-4 md:py-2">Periodo</th>
+                        <th class="border border-gray-300 px-2 py-1 text-sm md:text-base md:px-4 md:py-2">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 px-2 py-1 text-sm md:text-base md:px-4 md:py-2">2024</td>
+                        <td class="border border-gray-300 px-2 py-1 text-sm md:text-base md:px-4 md:py-2">
+                            Curso de programación en 
+                            <a href="https://umupla.wordpress.com/"><b>U.MU.PLA CFP 413</b></a> - La Plata
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-2 py-1 text-sm md:text-base md:px-4 md:py-2">2023 - Actualidad</td>
+                        <td class="border border-gray-300 px-2 py-1 text-sm md:text-base md:px-4 md:py-2">
+                            Estudiante de 2do año de Ingeniería de sistemas en la 
+                            <a href="https://www.frlp.utn.edu.ar/" target="_blank"><b>UTN FRLP</b></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-2 py-1 text-sm md:text-base md:px-4 md:py-2">2012 - 2023</td>
+                        <td class="border border-gray-300 px-2 py-1 text-sm md:text-base md:px-4 md:py-2">
+                            Estudiante de 4to año de Ingeniería electromecánica en 
+                            <a href="https://ing.unlp.edu.ar/" target="_blank"><b>FI - UNLP</b></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 px-2 py-1 text-sm md:text-base md:px-4 md:py-2">2012</td>
+                        <td class="border border-gray-300 px-2 py-1 text-sm md:text-base md:px-4 md:py-2">
+                            Egresado en Escuela 
+                            <a href="https://uanormal1-bue.infd.edu.ar/sitio/" target="_blank"><b>Educación Media N°32</b></a>: Bachiller en Ciencias Sociales
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mt-4 w-[90%] md:w-[80%]" id="conocimientos">
+        <div class="">
+            <!--Conocimientos-->
+            <h2 class="text-xl md:text-2xl">Conocimientos</h2>
+            <table class="table-auto border-collapse border border-gray-300 w-full text-left">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2">Categoría</th>
+                        <th class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2 font-bold">Programación</td>
+                        <td class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2">Conocimiento de lenguajes de programación como Lenguaje C, Java, JavaScript.</td>
+                    </tr>
+                    <tr class="">
+                        <td class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2 font-bold">Desarrollo web</td>
+                        <td class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2">Conocimiento de herramientas como HTML5, CSS3, JavaScript (ES6).</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2 font-bold">CMS</td>
+                        <td class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2">Conocimiento de constructores de sitio web como WordPress (Gutenberg) y Google Sites.</td>
+                    </tr>
+                    <tr class="">
+                        <td class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2 font-bold">Frameworks</td>
+                        <td class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2">Conocimiento de frameworks como TailwindCSS, Node.JS, Express.</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2 font-bold">Idiomas</td>
+                        <td class="border border-gray-300 text-sm md:text-base px-2 py-1 md:px-4 md:py-2">Español: Nativo | Inglés: B1.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mt-4 w-[90%] md:w-[80%]" id="experiencia">
+        <!--EXPERIENCIA LABORAL-->
+        <h2 class="text-xl md:text-2xl">Experiencia Laboral</h2>
+        <div class="mt-2 text-sm md:text-base">
+            <h4 class="font-bold">Colaborador en Investigación de Enseñanzas de la Ciencia (I.E.C.) UTN La Plata <span style="color: green; font-size: large;">&bull;</span></h4>
+            <p>Participo como colaborador en el desarrollo y entrega de software para el departamento de Física en la Universidad Tecnológica Nacional La Plata.</p>
+        </div>
+        <div class="mt-2 text-sm md:text-base">
+            <h4 class="font-bold">Profesor Particular en Matemáticas y Física <span style="color: orange;font-size: large;">&bull;</span></h4>
+            <p>Doy clases particulares de apoyo escolar y universitario en las áreas de matemáticas y física.</p>
+        </div>
+        <div class="mt-2 text-sm md:text-base">
+            <h4 class="font-bold">Electricista <span style="color: green;font-size: large;">&bull;</span></h4>
+            <p>Canalización e instalación de circuitos eléctricos de baja tensión en hogares, templos y pequeños comercios.</p>
+        </div>
+    </div>
+
+    <div class="mt-4 w-[90%] md:w-[80%]">
+        <!--PROYECTOS-->
+        <div id="proyectos" class="flex flex-col gap-2 ocultar-al-imprimir">
+            <h2 class="text-xl md:text-2xl" id="proyectos">Proyectos</h2>
+            <div class="text-sm md:text-base">
+                <h4 class="font-bold">Desarrollo y mantenimiento de sitios web</h4>
+                <p>Continuo actualizando y mejorando mis proyectos personales y de clientes empleando todo lo aprendido en HTML, CSS, JavaScript, TailwindCSS, WordPress y Google Sites. Cada proyecto se beneficia de mi continuo aprendizaje y actualización de las tecnologías.</p>
+                <p>Visita algunos de mis proyectos:</p>
+                <ul>
+                    <li><b>- <a href="https://barbify.up.railway.app/" target="_blank">Barbify</a></b> - Gestion de clientes</li>
+                    <li><b>- <a href="https://marcosadrianl.github.io/onlineCVgenerator/" target="_blank">Online CV generator</a></b></li>
+                    <li><b>- <a href="https://sites.google.com/view/clubdela3ra/" target="_blank">Club de la Tercera</a></b> - Pagina oficial del Club de la 3ra Edad</li>
+                </ul>
+            </div>
+            <div class="text-sm md:text-base">
+                <h4 class="font-bold">Laboratorio I.E.C.: Cálculo del μ estático</h4>
+                <p>En los laboratorios de Investigación de Enseñanzas de la Ciencia, participé en la creación de software con Arduino y MyOpenLab, desarrollando el motor de cálculo y colaborando en la UI del programa. Este programa se utilizará en los departamentos de física de la UTN La Plata y en remoto por alumnos de la UTN regional Tucumán.</p>
+            </div>
+            <div class="text-sm md:text-base">
+                <h4 class="font-bold">Laboratorio I.E.C.: Laboratorios Remotos</h4>
+                <p>Participo en el desarrollo de programas mediante Arduino y Python para laboratorios de ensayos ópticos (Ley de Snell) y de gases (Ley de Gas Ideal), que se pueden ejecutar en tiempo real de manera remota gracias a la integración del Grupo <b><a href="https://codapli.frlp.utn.edu.ar/" target="_blank">CODAPLI</a></b>. Este software se ejecutará por alumnos de la UTN regional La Plata.</p>
+            </div>
+            <div class="text-sm md:text-base">
+                <h4 class="font-bold">Desarrollo de software controlador para adquisidor de datos</h4>
+                <p>Junto con el equipo del área de Ingeniería en Sistemas, participo en el desarrollo del software para el adquisidor de datos del laboratorio, utilizando lenguaje Python, Arduino y experimentando con SmallTalk. Este software permite al usuario visualizar los datos del adquisidor en tiempo real, sensar valores de tensiones y corrientes generando gráficas de las mismas.</p>
+            </div>
+            <div class="text-sm md:text-base">
+                <h4 class="font-bold">Profesor particular en matemáticas y física</h4>
+                <p>Desde 2017 hasta la actualidad, llevo adelante el dictado de clases para alumnos de primaria hasta universitarios que requieren apoyo especial en estas áreas. En esta etapa, pude desarrollar habilidades de comunicación y enseñanza, compartir conocimientos y ayudar a los demás en algo que me apasiona.</p>
+            </div>
+            <div class="text-sm md:text-base">
+                <h4 class="font-bold">Diseño, desarrollo y creación de Circuitos PCB</h4>
+                <p>En el laboratorio de electrónica de la Facultad de Ingeniería de la UNLP, desarrollé circuitos electrónicos diversos empleando software de diseño como EasyEDA y EAGLE para el diseño, especificación y creación de circuitos. Luego, mediante distintos métodos, llevé adelante la creación y puesta en prueba de filtros activos de segundo orden para audio, fuentes de energía con bajo nivel de ruido (low ripple), adaptadores de impedancia activos para audio y circuitos amplificadores de sonido. Estos proyectos los utilicé al servicio de mi iglesia local resolviendo problemas de conexión y calidad de sonido.</p>
             </div>
         </div>
     </div>
-    <br>
-    <div class="section-container">
-        <div class="title-section" id="conocimientos">
-            <!--CONOCIMIENTOS-->
-            <div>
-                <h2>Conocimientos</h2>
-                <hr>
-                <div>
-                    <div class="seccion-item">
-                        <h4 class="seccion-a">Programación</h4>
-                        <p class="seccion-b">Conocimiento de lenguajes de programación como Lenguaje C, Java, JavaScript.</p>
-                    </div>
-                    <div class="seccion-item">
-                        <h4 class="seccion-a">Desarrollo web</h4>
-                        <p class="seccion-b">Conocimiento de herramientas como HTML, CSS, JavaScript.</p>
-                    </div>
-                    <div class="seccion-item">
-                        <h4 class="seccion-a">CMS</h4>
-                        <p class="seccion-b">Conocimiento de constructores de sitio web como WordPress y Google Sites.</p>
-                    </div>
-                    <div class="seccion-item">
-                        <h4 class="seccion-a">Frameworks</h4>
-                        <p class="seccion-b">Conocimiento de frameworks como TailwindCSS.</p>
-                    </div>
-                    <div class="seccion-item">
-                        <h4 class="seccion-a">Idiomas</h4>
-                        <p class="seccion-b">Español: Nativo <br> Inglés: Conversacional.</p>
-                    </div>
-                </div>
-                </div>
+    <div class="mt-4 w-[90%] md:w-[80%]">
+        <!--HABILIDADES-->
+        <h2 class="text-xl md:text-2xl" id="habilidades">Softskills</h2>
+        <div class="flex flex-col gap-2 text-sm md:text-base">
+            <div class="">
+                <h4 class="font-bold">Responsabilidad</h4>
+                <p class="seccion-b">Actitud comprometida con los clientes, compañeros y los proyectos a desarrollar.</p>
             </div>
-        </div>
-    </div>           
-    <br>
-    <div class="section-container">
-        <div class="title-section" id="experiencia" >
-            <!--EXPERIENCIA LABORAL-->
-            <div >
-                <h2>Experiencia Laboral</h2>
-                <hr>
-                <div class="descripcion-item">
-                    <h4>Colaborador en I.E.C. UTN La Plata <span style="color: green; font-size: large;">&bull;</span></h4>
-                    <p>Participo como colaborador en el desarrollo y entrega de software para el departamento de Física en la Universidad Tecnológica Nacional La Plata.</p>
-                </div>
-                <div class="descripcion-item">
-                    <h4>Profesor Particular en Matemáticas y Física <span style="color: orange;font-size: large;">&bull;</span></h4>
-                    <p>Doy clases particulares de apoyo escolar y universitario en las áreas de matemáticas y física.</p>
-                </div>
-                <div class="descripcion-item">
-                    <h4>Electricista <span style="color: red;font-size: large;">&bull;</span></h4>
-                    <p>Canalización e instalación de circuitos eléctricos de baja tensión en hogares, templos y pequeños comercios.</p>
-                </div>
-                
+            <div class="">
+                <h4 class="font-bold">Dedicación</h4>
+                <p class="seccion-b">Comprometido con los proyectos de principio a fin</p>
             </div>
-        </div>
-    </div>
-    <div class="section-container">
-        <div class="title-section">
-            <!--PROYECTOS-->
-            <div id="proyectos" class="ocultar-al-imprimir">
-                <br> 
-                <h2 id="proyectos">Proyectos</h2>
-                <hr>
-                <div class="descripcion-item">
-                    <h4>Desarrollo y mantenimiento de sitios web</h4>
-                    <p>Continuo actualizando y mejorando mis proyectos personales y de clientes empleando todo lo aprendido en HTML, CSS, JavaScript, TailwindCSS, WordPress y Google Sites. Cada proyecto se beneficia de mi continuo aprendizaje y actualización de las tecnologías.</p>
-                    <p>Visita algunos de mis proyectos:</p>
-                    <ul>
-                        <li><b>- <a href="https://marcosadrianl.github.io/onlineCVgenerator/" >Online CV generator</a></b></li>
-                        <li><b>- <a href="" >Marcos Lucas OnlineCV</a></b> (este sitio)</li>
-                        <li><b>- <a href="https://marcosadrianl.github.io/site/landing.html" target="_blank">Mark! Desarrollo Web</a></b></li>
-                        <li><b>- <a href="https://sites.google.com/view/clubdela3ra/" target="_blank">Club de la Tercera</a></b></li>
-                    </ul>
-                </div>
-                <div class="descripcion-item">
-                    <h4>Laboratorio I.E.C.: Cálculo del μ estático</h4>
-                    <p>En los laboratorios de Investigación de Enseñanzas de la Ciencia, participé en la creación de software con Arduino y MyOpenLab, desarrollando el motor de cálculo y colaborando en la UI del programa. Este programa se utilizará en los departamentos de física de la UTN La Plata y en remoto por alumnos de la UTN regional Tucumán.</p>
-                </div>
-                <div class="descripcion-item">
-                    <h4>Laboratorio I.E.C.: Laboratorios Remotos</h4>
-                    <p>Participo en el desarrollo de programas mediante Arduino y Python para laboratorios de ensayos ópticos (Ley de Snell) y de gases (Ley de Gas Ideal), que se pueden ejecutar en tiempo real de manera remota gracias a la integración del Grupo <b><a href="https://codapli.frlp.utn.edu.ar/" target="_blank">CODAPLI</a></b>. Este software se ejecutará por alumnos de la UTN regional La Plata.</p>
-                </div>
-                <div class="descripcion-item">
-                    <h4>Desarrollo de software controlador para adquisidor de datos</h4>
-                    <p>Junto con el equipo del área de Ingeniería en Sistemas, participo en el desarrollo del software para el adquisidor de datos del laboratorio, utilizando lenguaje Python, Arduino y experimentando con SmallTalk. Este software permite al usuario visualizar los datos del adquisidor en tiempo real, sensar valores de tensiones y corrientes generando gráficas de las mismas.</p>
-                </div>
-                <div class="descripcion-item">
-                    <h4>Profesor particular en matemáticas y física</h4>
-                    <p>Desde 2017 hasta la actualidad, llevo adelante el dictado de clases para alumnos de primaria hasta universitarios que requieren apoyo especial en estas áreas. En esta etapa, pude desarrollar habilidades de comunicación y enseñanza, compartir conocimientos y ayudar a los demás en algo que me apasiona.</p>
-                </div>
-                <div class="descripcion-item">
-                    <h4>Diseño, desarrollo y creación de Circuitos PCB</h4>
-                    <p>En el laboratorio de electrónica de la Facultad de Ingeniería de la UNLP, desarrollé circuitos electrónicos diversos empleando software de diseño como EasyEDA y EAGLE para el diseño, especificación y creación de circuitos. Luego, mediante distintos métodos, llevé adelante la creación y puesta en prueba de filtros activos de segundo orden para audio, fuentes de energía con bajo nivel de ruido (low ripple), adaptadores de impedancia activos para audio y circuitos amplificadores de sonido. Estos proyectos los utilicé al servicio de mi iglesia local resolviendo problemas de conexión y calidad de sonido.</p>
-                </div>
+            <div class="">
+                <h4 class="font-bold">Comunicación</h4>
+                <p class="seccion-b">Buena disposición a escuchar, atender y comprender las distintas problemáticas.</p>
             </div>
-    </div>
-        </div>
-    </div>
-    <br>
-    <div class="section-container">
-        <div class="title-section">
-            <!--HABILIDADES-->
-            <h2 id="habilidades">Softskills</h2>
-            <hr>
-            <div class="estudios">
-                <div class="seccion-item">
-                    <h4 class="seccion-a">Responsabilidad</h4>
-                    <p class="seccion-b">Actitud comprometida con los clientes, compañeros y los proyectos a desarrollar.</p>
-                </div>
-                <div class="seccion-item">
-                    <h4 class="seccion-a">Dedicación</h4>
-                    <p class="seccion-b">Comprometido con los proyectos de principio a fin</p>
-                </div>
-                <div class="seccion-item">
-                    <h4 class="seccion-a">Comunicación</h4>
-                    <p class="seccion-b">Buena disposición a escuchar, atender y comprender las distintas problemáticas.</p>
-                </div>
-                <div class="seccion-item">
-                    <h4 class="seccion-a">Trabajo en equipo</h4>
-                    <p class="seccion-b">Capacidad de trabajar en equipo, asumiendo responsabilidades y colaborando con los demás para alcanzar los objetivos.</p>
-                </div>
+            <div class="">
+                <h4 class="font-bold">Trabajo en equipo</h4>
+                <p class="seccion-b">Capacidad de trabajar en equipo, asumiendo responsabilidades y colaborando con los demás para alcanzar los objetivos.</p>
             </div>
         </div>
     </div>
     <br>
 </section>
-
-<footer>
-    <div class="footer-container">
-        <p class="ocultar-al-imprimir">Marcos Lucas - 2024</p>
+<footer class="flex flex-col w-full">
+    <div class="mx-auto">
+        <p class="text-sm md:text-base ocultar-al-imprimir">Marcos Lucas - <span id="year">2024</span></p>
     </div>
 </footer>
 <script src="script.js"></script>
+<script>
+    const year = new Date().getFullYear();
+    document.getElementById('year').innerText = year;
+</script>
 </body>
 </html>
